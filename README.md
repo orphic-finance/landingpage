@@ -1,2 +1,2 @@
-# orphic-finance.github
+# orphic finance landing page
 Orphic Finance
