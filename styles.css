@@ -1,0 +1,138 @@
+:root {
+    --background-color: #efe2c7; /* Set your background color */
+  }
+  
+  body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+  }
+  
+  .header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #004514;
+    font-weight: bold;
+  }
+  
+  .connect-button {
+    background-color: #004514;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensures the shadow doesn't spill outside this container */
+  }
+  
+  .image-content::before {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--fade-intensity));
+    bottom: calc(-1 * var(--fade-intensity));
+    left: calc(-1 * var(--fade-intensity));
+    right: calc(-1 * var(--fade-intensity));
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, var(--fade-color) var(--fade-edge-strength), var(--fade-color) 100%);
+    z-index: -1; /* Positions the gradient below the image */
+  }
+  
+  .art-image {
+    max-width: 50%;
+    height: auto;
+    border-bottom: solid 5px #004514;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 200px var(--background-color) inset; /* Creates the fade effect */
+  }
+  
+  .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 48px;
+    color: #004514;
+    font-family: 'Abril Fatface', cursive;
+  }
+  
+  .subtitle {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .enter-button {
+    margin-top: 20px;
+    background-color: #004514;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-content, .text-content {
+      flex: none;
+      width: 100%;
+    }
+  
+    .art-image {
+        max-width: 80%;
+        box-shadow: 0 0 0 50px var(--background-color) inset; /* Adjust for smaller screens */
+      }
+  
+    .text-content {
+      padding: 0;
+    }
+  
+    .header, .menu, .connect-button {
+      text-align: center;
+    }
+  
+    .menu {
+      justify-content: center;
+    }
+  }
+  
