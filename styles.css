@@ -4,10 +4,12 @@
   --button-bg-color: #004514; /* Green */
   --button-text-color: #efe2c7; /* Light beige */
 
+  --glow-color: rgba(165, 214, 167, 0.75);
+
   /* Additional colors for gradient */
-  --gradient-color-1: #ADBC9F; /* Starting color of the gradient */
-  --gradient-color-2: #436850;   /* Intermediate gradient color */
-  --gradient-color-3: #12372A;  /* Deepest gradient color */
+  --gradient-color-1: #adbc9f; /* Starting color of the gradient */
+  --gradient-color-2: #436850; /* Intermediate gradient color */
+  --gradient-color-3: #12372a; /* Deepest gradient color */
 }
 
 [data-theme="dark"] {
@@ -16,7 +18,6 @@
   --button-bg-color: #efe2c7; /* Light beige */
   --button-text-color: #004514; /* Dark Green */
 }
-
 
 .planet {
   position: relative;
@@ -36,20 +37,22 @@
   top: 50%;
   z-index: -1;
   transform: translate(-50%, -50%);
-  background-image: radial-gradient(at center, 
-        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
-        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 10%) 19%, 
-        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 20%) 20%, 
-        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
-        color-mix(in oklch, var(--gradient-color-2), var(--gradient-color-3) 50%) 55%, 
-        transparent 70%);
+  background-image: radial-gradient(
+    at center,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 10%)
+      19%,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 20%)
+      20%,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+    color-mix(in oklch, var(--gradient-color-2), var(--gradient-color-3) 50%)
+      55%,
+    transparent 70%
+  );
 }
 
-
-
-
 body {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
@@ -87,10 +90,11 @@ body {
   gap: 10px; /* Space between buttons */
 }
 
-.connect-button, .theme-toggle {
+.connect-button,
+.theme-toggle {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
-  font-family: 'Lora', serif; /* Ensure font consistency */
+  font-family: "Lora", serif; /* Ensure font consistency */
   font-size: 16px; /* Optional: Adjust based on your design preferences */
   padding: 10px 20px;
   text-decoration: none;
@@ -102,7 +106,6 @@ body {
   align-items: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
-
 
 .container {
   width: 80%;
@@ -142,7 +145,7 @@ body {
 
 .title {
   font-size: 48px;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
 }
 
 .subtitle {
@@ -151,57 +154,68 @@ body {
   font-weight: bold;
 }
 
+/* Keyframes for glowing animation */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+}
+
+/* Button styling with glow animation */
 .enter-button {
-  margin-top: 20px;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
   padding: 10px 20px;
+  font-family: "Lora", serif;
+  font-size: 16px; /* Maintain existing font size */
   text-decoration: none;
   border-radius: 20px;
-  display: flex; /* Centers text inside the button horizontally */
-  justify-content: center; /* Center horizontally in the button */
-  align-items: center; /* Center vertically in the button */
+  border: none;
+  cursor: pointer;
+  display: inline-flex; /* Changed from flex to inline-flex for better control */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  animation: glow 4s infinite alternate ease-in-out; /* Apply the glow animation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
 
+/* Hover effect to enhance glow */
+.enter-button:hover {
+  box-shadow: 0 0 25px var(--glow-color);
+}
 
 .pop-title {
   position: relative;
-  display: inline-block;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 48px;
+  font-family: "Abril Fatface", cursive;
+  font-size: 46px;
   color: transparent;
   background: linear-gradient(
-    to right,
-    var(--gradient-color-1) 20%, 
-    var(--gradient-color-2) 40%, 
-    var(--gradient-color-3) 60%, 
-    var(--gradient-color-2) 80%, 
+    90deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-2),
     var(--gradient-color-1)
   );
-  background-size: 200% 100%; /* Make gradient wide enough to slide through the text */
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-background-clip: text; /* For Safari */
-  -webkit-text-fill-color: transparent; /* For Safari */
-  animation: movingGradient 8s linear infinite; /* Smooth continual animation */
+  -webkit-text-fill-color: transparent;
+  animation: movingGradient 8s linear infinite;
 }
 
-
-
-@keyframes pop {
-  0%, 100% { transform: scale(0.5); opacity: 0; }
-  50% { transform: scale(1.2); opacity: 1; }
-}
-
-
-/* Additional Keyframes for Moving Color */
 @keyframes movingGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
+  0%,
+  100% {
     background-position: 100% 50%;
   }
-  100% {
+  50% {
     background-position: 0% 50%;
   }
 }
