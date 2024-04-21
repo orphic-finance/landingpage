@@ -6,12 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         if (currentTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
-            this.textContent = '🌞 Day'; // Sun emoji for day mode
+            this.textContent = '🌜 Night'; // Switch to Night Mode
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
-            this.textContent = '🌜 Night'; // Moon emoji for night mode
+            this.textContent = '🌞 Day'; // Switch to Day Mode
         }
     });
 });
-
-

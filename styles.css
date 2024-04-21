@@ -3,6 +3,11 @@
   --text-color: #004514; /* Green */
   --button-bg-color: #004514; /* Green */
   --button-text-color: #efe2c7; /* Light beige */
+
+  /* Additional colors for gradient */
+  --gradient-color-1: #ADBC9F; /* Starting color of the gradient */
+  --gradient-color-2: #436850;   /* Intermediate gradient color */
+  --gradient-color-3: #12372A;  /* Deepest gradient color */
 }
 
 [data-theme="dark"] {
@@ -11,6 +16,37 @@
   --button-bg-color: #efe2c7; /* Light beige */
   --button-text-color: #004514; /* Dark Green */
 }
+
+
+.planet {
+  position: relative;
+  height: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.planet:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1500px; /* This might be adjusted depending on actual use case */
+  height: 1500px; /* Added to maintain the aspect ratio */
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(at center, 
+        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 10%) 19%, 
+        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 20%) 20%, 
+        color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+        color-mix(in oklch, var(--gradient-color-2), var(--gradient-color-3) 50%) 55%, 
+        transparent 70%);
+}
+
+
+
 
 body {
   font-family: 'Lora', serif;
@@ -125,4 +161,47 @@ body {
   display: flex; /* Centers text inside the button horizontally */
   justify-content: center; /* Center horizontally in the button */
   align-items: center; /* Center vertically in the button */
+}
+
+
+.pop-title {
+  position: relative;
+  display: inline-block;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 48px;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--gradient-color-1) 20%, 
+    var(--gradient-color-2) 40%, 
+    var(--gradient-color-3) 60%, 
+    var(--gradient-color-2) 80%, 
+    var(--gradient-color-1)
+  );
+  background-size: 200% 100%; /* Make gradient wide enough to slide through the text */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  -webkit-text-fill-color: transparent; /* For Safari */
+  animation: movingGradient 8s linear infinite; /* Smooth continual animation */
+}
+
+
+
+@keyframes pop {
+  0%, 100% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+
+/* Additional Keyframes for Moving Color */
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
