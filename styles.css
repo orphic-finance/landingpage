@@ -10,6 +10,10 @@
   --gradient-color-1: #adbc9f; /* Starting color of the gradient */
   --gradient-color-2: #436850; /* Intermediate gradient color */
   --gradient-color-3: #12372a; /* Deepest gradient color */
+
+  --footer-background: rgba(0, 0, 0, 0.323); /* Semi-transparent black */
+  --footer-text-color: #efe2c7; /* Light beige */
+  --footer-box-border: rgba(255, 255, 255, 0.368);
 }
 
 [data-theme="dark"] {
@@ -17,6 +21,10 @@
   --text-color: #efe2c7; /* Light beige */
   --button-bg-color: #efe2c7; /* Light beige */
   --button-text-color: #004514; /* Dark Green */
+}
+
+html {
+  height: 100%;  /* Ensures the full height of the page is utilized */
 }
 
 .planet {
@@ -59,16 +67,15 @@ body {
   color: var(--text-color);
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
 
 .header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
+  width: 100%;
+  padding: 80px 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -217,5 +224,42 @@ body {
   }
   50% {
     background-position: 0% 50%;
+  }
+}
+
+
+
+footer {
+  padding: 5px 0;
+  display: flex;
+  border-radius: 30px;
+  justify-content: center; /* Center the footer content horizontally */
+  align-items: center;
+  background: var(--footer-background);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); /* Subtle top shadow for depth */
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background: var(--footer-box-background); /* Dark background for columns */
+  margin: 0 10px; /* Space between columns */
+  border-radius: 10px; /* Rounded corners for aesthetic */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 800px) {
+  .container {
+      flex-direction: column; /* Stack image and content vertically on small screens */
+  }
+  .image-content, .text-content {
+      margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }
