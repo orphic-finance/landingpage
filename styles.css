@@ -74,7 +74,9 @@ body {
 }
 
 .header {
+  padding: 20px;
   width: 100%;
+  justify-content: space-between;
   padding: 80px 80px;
   display: flex;
   justify-content: space-between;
@@ -95,6 +97,8 @@ body {
 .buttons {
   display: flex;
   gap: 10px; /* Space between buttons */
+  align-items: center; /* Align buttons vertically */
+  padding-right: 40px; /* Padding from the right edge of the page */
 }
 
 .connect-button,
