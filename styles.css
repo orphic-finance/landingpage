@@ -14,6 +14,10 @@
   --footer-background: rgba(0, 0, 0, 0.323); /* Semi-transparent black */
   --footer-text-color: #efe2c7; /* Light beige */
   --footer-box-border: rgba(255, 255, 255, 0.368);
+
+  --primary-bg: conic-gradient(from var(--angle, 180deg) at 50% 70%, hsla(0,0%,98%,1) 0deg,
+   #eec32d 72deg, #ec4b4b 144deg, #b970a7 216deg, #4dffbf 288deg, hsla(0,0%,98%,1) 360deg);
+   --angle: 180deg; /* Initial angle for the gradient */
 }
 
 [data-theme="dark"] {
@@ -22,6 +26,29 @@
   --button-bg-color: #efe2c7; /* Light beige */
   --button-text-color: #004514; /* Dark Green */
 }
+
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+.dynamic-color {
+  font-family: "Geist Sans", sans-serif;
+  font-size: 48px; /* Example size, adjust as needed */
+  background: var(--primary-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  to { --angle: 540deg; }
+}
+
+
 
 html, body {
   height: 100%;
@@ -211,7 +238,7 @@ body {
   font-size: 46px;
   color: transparent;
   background: linear-gradient(
-    90deg,
+    110deg,
     var(--gradient-color-1),
     var(--gradient-color-2),
     var(--gradient-color-3),
