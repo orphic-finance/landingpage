@@ -9,7 +9,7 @@
   /* Additional colors for gradient */
   --gradient-color-1: #adbc9f; /* Starting color of the gradient */
   --gradient-color-2: #436850; /* Intermediate gradient color */
-  --gradient-color-3: #12372a; /* Deepest gradient color */
+  --gradient-color-3: #004514; /* Deepest gradient color */
 
   --footer-background: rgba(0, 0, 0, 0.323); /* Semi-transparent black */
   --footer-text-color: #efe2c7; /* Light beige */
