@@ -1,0 +1,301 @@
+:root {
+  --background-color: #efe2c7; /* Light beige */
+  --text-color: #004514; /* Green */
+  --button-bg-color: #004514; /* Green */
+  --button-text-color: #efe2c7; /* Light beige */
+
+  --glow-color: rgba(165, 214, 167, 0.75);
+
+  /* Additional colors for gradient */
+  --gradient-color-1: #adbc9f; /* Starting color of the gradient */
+  --gradient-color-2: #436850; /* Intermediate gradient color */
+  --gradient-color-3: #004514; /* Deepest gradient color */
+
+  --footer-background: rgba(0, 0, 0, 0.323); /* Semi-transparent black */
+  --footer-text-color: #efe2c7; /* Light beige */
+  --footer-box-border: rgba(255, 255, 255, 0.368);
+
+  --primary-bg: conic-gradient(from var(--angle, 180deg) at 50% 70%, hsla(0,0%,98%,1) 0deg,
+   #eec32d 72deg, #ec4b4b 144deg, #b970a7 216deg, #4dffbf 288deg, hsla(0,0%,98%,1) 360deg);
+   --angle: 180deg; /* Initial angle for the gradient */
+}
+
+[data-theme="dark"] {
+  --background-color: #004514; /* Dark Green */
+  --text-color: #efe2c7; /* Light beige */
+  --button-bg-color: #efe2c7; /* Light beige */
+  --button-text-color: #004514; /* Dark Green */
+}
+
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+.dynamic-color {
+  font-family: "Geist Sans", sans-serif;
+  font-size: 48px; /* Example size, adjust as needed */
+  background: var(--primary-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  to { --angle: 540deg; }
+}
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.planet {
+  position: relative;
+  height: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.planet:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1500px; /* This might be adjusted depending on actual use case */
+  height: 1500px; /* Added to maintain the aspect ratio */
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(
+    at center,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 10%)
+      19%,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 20%)
+      20%,
+    color-mix(in oklch, var(--gradient-color-1), var(--gradient-color-2) 80%),
+    color-mix(in oklch, var(--gradient-color-2), var(--gradient-color-3) 50%)
+      55%,
+    transparent 70%
+  );
+}
+
+body {
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  padding: 10px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: inherit; /* Ensures color changes with theme */
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  align-items: center; /* Align buttons vertically */
+  padding-right: 40px; /* Padding from the right edge of the page */
+}
+
+.connect-button,
+.theme-toggle {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-family: "Lora", serif; /* Ensure font consistency */
+  font-size: 16px; /* Optional: Adjust based on your design preferences */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex; /* Align text inside the button */
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 200px; /* Increased padding for spacing */
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 80px; /* Increased bottom margin */
+}
+
+.art-image {
+  width: 80%;
+  border-radius: 50px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 80px; /* Increased bottom margin */
+  gap: 45px;
+}
+
+.title {
+  font-size: 48px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+/* Keyframes for glowing animation */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+}
+
+/* Button styling with glow animation */
+.enter-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  font-family: "Lora", serif;
+  font-size: 16px; /* Maintain existing font size */
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex; /* Changed from flex to inline-flex for better control */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  animation: glow 4s infinite alternate ease-in-out; /* Apply the glow animation */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+/* Hover effect to enhance glow */
+.enter-button:hover {
+  box-shadow: 0 0 25px var(--glow-color);
+}
+
+.pop-title {
+  position: relative;
+  font-family: "Abril Fatface", cursive;
+  font-size: 46px;
+  color: transparent;
+  background: linear-gradient(
+    110deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-2),
+    var(--gradient-color-1)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: movingGradient 8s linear infinite;
+}
+
+@keyframes movingGradient {
+  0%,
+  100% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+footer {
+  padding: 5px 0;
+  display: flex;
+  border-radius: 30px;
+  justify-content: center; /* Center the footer content horizontally */
+  align-items: center;
+  background: var(--footer-background);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); /* Subtle top shadow for depth */
+  margin-top: 50px; /* Increased gap between main content and footer */
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background: var(--footer-box-background); /* Dark background for columns */
+  margin: 0 10px; /* Space between columns */
+  border-radius: 10px; /* Rounded corners for aesthetic */
+  backdrop-filter: blur(10px); /* Blur effect for background */
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 800px) {
+  .container {
+      flex-direction: column; /* Stack image and content vertically on small screens */
+  }
+  .image-content, .text-content {
+      margin: 5px 5px; /* Adjust margin for vertical stacking */
+  }
+}
