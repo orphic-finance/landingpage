@@ -10,6 +10,103 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/README.md
 # orphic finance landing page
 Orphic Finance
 
+some other good backgrounds
+```html
+background: radial-gradient(
+    50% 50%at 50% 50%,
+    #d5e2b2 16.67%,
+    rgba(144, 224, 255, 0) 48.34%
+),
+radial-gradient(
+    50% 50%at 50% 50%,
+    rgba(236, 170, 122, 0.1) 50.74%,
+    rgba(169, 96, 238, 0)
+),
+radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
+radial-gradient(
+    50% 50%at 50% 50%,
+    #ffcb57 41.18%,
+    rgba(183, 120, 225, 0) 71.99%
+),
+radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
+```
+
+```html
+background: radial-gradient(
+    circle at 20% 20%, 
+    #e0f7fa 20%, 
+    rgba(224, 247, 250, 0) 40%
+),
+radial-gradient(
+    circle at 80% 30%, 
+    rgba(255, 138, 101, 0.3) 30%, 
+    rgba(255, 138, 101, 0) 60%
+),
+radial-gradient(
+    circle at 50% 70%, 
+    #fbc02d 40%, 
+    rgba(251, 192, 45, 0) 70%
+),
+radial-gradient(
+    circle at 50% 50%, 
+    #8e24aa 60%, 
+    rgba(142, 36, 170, 0.3) 90%
+),
+radial-gradient(
+    circle at 50% 50%, 
+    #3949ab, 
+    rgba(57, 73, 171, 0.5) 100%
+);
+```
+
+```html
+background: radial-gradient(
+    circle at 30% 30%,
+    #ff9a9e 20%,
+    rgba(255, 154, 158, 0) 50%
+),
+radial-gradient(
+    circle at 70% 40%,
+    rgba(129, 207, 224, 0.3) 25%,
+    rgba(129, 207, 224, 0) 55%
+),
+radial-gradient(circle at 60% 80%, #fbc2eb 30%, rgba(251, 194, 235, 0) 70%),
+radial-gradient(
+    circle at 50% 50%,
+    #a1c4fd 40%,
+    rgba(161, 196, 253, 0.3) 80%
+),
+radial-gradient(circle at 50% 50%, #c3cfe2, rgba(195, 207, 226, 0.5) 100%);
+```
+
+```html
+background: radial-gradient(
+      circle at 20% 40%, 
+      #ffb6c1 20%, 
+      rgba(255, 182, 193, 0) 50%
+    ),
+    radial-gradient(
+      circle at 80% 30%, 
+      rgba(123, 104, 238, 0.3) 25%, 
+      rgba(123, 104, 238, 0) 55%
+    ),
+    radial-gradient(
+      circle at 60% 70%, 
+      #f9fb98 30%, 
+      rgba(152, 251, 152, 0) 70%
+    ),
+    radial-gradient(
+      circle at 50% 50%, 
+      #ff7f50 40%, 
+      rgba(255, 127, 80, 0.3) 80%
+    ),
+    radial-gradient(
+      circle at 50% 50%, 
+      #eeec77, 
+      rgba(202, 235, 135, 0.5) 100%
+    );
+```
+
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/global.css
 body {
@@ -169,7 +266,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .contacts,
 .navigation {
@@ -387,10 +483,22 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
 .x {
   margin: 0;
 }
-.links {
+
+.links a {
   position: relative;
   line-height: 20px;
+
+  flex-direction: column;
+
+  display: inline-block; /* Makes them behave like block-level elements */
+  padding: 5px 8px; /* Add padding for a button-like appearance */
+  background-color: #88888859; /* Example background color */
+  color: #333; /* Example text color */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 15px; /* Add rounded corners */
+  margin: 5px; /* Add some spacing between the links */
 }
+
 .body,
 .right-column {
   display: flex;
@@ -412,7 +520,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   flex-direction: row;
   padding: 152.5px 1px;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   row-gap: 20px;
   font-size: var(--headline-1-size);
   color: var(--headlines);
@@ -424,46 +531,49 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   justify-content: flex-start;
 }
 .center {
-  height: 1032px;
   flex: 1;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
-  padding: 0 71px 962px;
+  padding: 0 71px;
   box-sizing: border-box;
   max-width: 100%;
   max-height: 100%;
+  min-height: 100vh;
 }
 .background,
 .orphic-landing {
   flex-direction: row;
   align-items: flex-start;
 }
+
 .background {
   flex: 1;
   background: radial-gradient(
-      50% 50%at 50% 50%,
-      #d5e2b2 16.67%,
-      rgba(144, 224, 255, 0) 48.34%
+      circle at 25% 25%,
+      #ffefd5 10%,
+      rgba(255, 239, 213, 0) 30%
     ),
     radial-gradient(
-      50% 50%at 50% 50%,
-      rgba(236, 170, 122, 0.1) 50.74%,
-      rgba(169, 96, 238, 0)
+      circle at 75% 35%,
+      rgba(32, 178, 170, 0.3) 30%,
+      rgba(32, 178, 170, 0) 60%
     ),
-    radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
+    radial-gradient(circle at 65% 75%, #e6e6fa 20%, rgba(230, 230, 250, 0) 50%),
     radial-gradient(
-      50% 50%at 50% 50%,
-      #ffcb57 41.18%,
-      rgba(183, 120, 225, 0) 71.99%
+      circle at 50% 50%,
+      #f0e68c 35%,
+      rgba(240, 230, 140, 0.3) 70%
     ),
-    radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
+    radial-gradient(circle at 50% 50%, #ffdab9, rgba(255, 218, 185, 0.5) 100%);
+
   max-width: 100%;
   text-align: center;
   font-size: var(--font-size-mini);
   color: var(--primary-buttons);
   font-family: var(--font-abhaya-libre);
 }
+
 .orphic-landing {
   width: 100%;
   position: relative;
@@ -588,7 +698,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <div class="tab-labels">
                 <div class="home">
                   <div class="button-home">
-                    <a class="home1">orphic</a>
+                    <a href="https://www.google.com/" class="home1">orphic</a>
                     <img
                       class="vector-1-stroke"
                       alt=""
@@ -600,23 +710,29 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <div class="space"></div>
               <div class="navigation">
                 <div class="dashboard">
-                  <a class="dashboard1">Dashboard</a>
+                  <a class="dashboard1" href="https://www.google.com/"
+                    >Dashboard</a
+                  >
                 </div>
                 <div class="monitoring">
-                  <a class="monitoring1">Monitoring</a>
+                  <a class="monitoring1" href="https://www.google.com/"
+                    >Monitoring</a
+                  >
                 </div>
                 <div class="docs">
-                  <a class="docs1">Docs</a>
-                </div>
+                  <a class="docs1" href="https://www.google.com/">Docs</a>
+                </div> 
                 <div class="contacts">
-                  <a class="contacts1">Contacts</a>
+                  <a class="contacts1" href="https://www.google.com/"
+                    >Contacts</a
+                  >
                 </div>
               </div>
               <div class="space1"></div>
               <div class="tab-labels1">
                 <div class="app">
                   <div class="button-app">
-                    <a class="app1">App</a>
+                    <a class="app1" href="https://www.google.com/">App</a>
                     <img
                       class="vector-1-stroke1"
                       alt=""
@@ -636,42 +752,48 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <b class="subtitle">Automatic Liquidity Manager</b>
               <div class="buttons">
                 <div class="primarybutton">
-                  <b class="text">Start now</b>
+                  <b class="text" href="https://www.google.com/">Start now</b>
                   <img class="vector-icon" alt="" src="./public/vector.svg" />
                 </div>
                 <div class="secondarybutton">
-                  <b class="text1">Contact </b>
+                  <b class="text1" href="https://www.google.com/">Contact </b>
                   <img
                     class="vector-stroke-icon"
                     alt=""
                     src="./public/vector-stroke.svg"
                   />
-                </div>
-              </div>
+                </div> 
+              </div>  
               <b class="message">
                 <p class="not-financial-advice">Not Financial Advice</p>
                 <p class="all-rights-reserved">2024 © All Rights Reserved</p>
                 <p class="armand-morin">Armand Morin</p>
-              </b>
+              </b> 
             </div>
             <div class="right-column">
-              <img
+              <img 
                 class="shape-and-lines"
                 loading="lazy"
                 alt=""
                 src="./public/shape-and-lines.svg"
               />
-
               <b class="links">
-                <p class="github">Github</p>
-                <p class="linkedin">Linkedin</p>
-                <p class="x">X</p>
+                <a class="github" href="https://www.github.com/armand-morin"
+                  >Github</a
+                >  
+                <a 
+                  class="linkedin"
+                  href="https://www.linkedin.com/in/armand-morin"
+                  >Linkedin</a
+                >
+                <a class="x" href="https://www.twitter.com/armand-morin">X</a>
               </b>
-            </div>
+            </div> 
           </div>
-        </div>
+        </div> 
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
 
@@ -689,6 +811,103 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/README.md
 # orphic finance landing page
 Orphic Finance
 
+some other good backgrounds
+```html
+background: radial-gradient(
+    50% 50%at 50% 50%,
+    #d5e2b2 16.67%,
+    rgba(144, 224, 255, 0) 48.34%
+),
+radial-gradient(
+    50% 50%at 50% 50%,
+    rgba(236, 170, 122, 0.1) 50.74%,
+    rgba(169, 96, 238, 0)
+),
+radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
+radial-gradient(
+    50% 50%at 50% 50%,
+    #ffcb57 41.18%,
+    rgba(183, 120, 225, 0) 71.99%
+),
+radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
+```
+
+```html
+background: radial-gradient(
+    circle at 20% 20%, 
+    #e0f7fa 20%, 
+    rgba(224, 247, 250, 0) 40%
+),
+radial-gradient(
+    circle at 80% 30%, 
+    rgba(255, 138, 101, 0.3) 30%, 
+    rgba(255, 138, 101, 0) 60%
+),
+radial-gradient(
+    circle at 50% 70%, 
+    #fbc02d 40%, 
+    rgba(251, 192, 45, 0) 70%
+),
+radial-gradient(
+    circle at 50% 50%, 
+    #8e24aa 60%, 
+    rgba(142, 36, 170, 0.3) 90%
+),
+radial-gradient(
+    circle at 50% 50%, 
+    #3949ab, 
+    rgba(57, 73, 171, 0.5) 100%
+);
+```
+
+```html
+background: radial-gradient(
+    circle at 30% 30%,
+    #ff9a9e 20%,
+    rgba(255, 154, 158, 0) 50%
+),
+radial-gradient(
+    circle at 70% 40%,
+    rgba(129, 207, 224, 0.3) 25%,
+    rgba(129, 207, 224, 0) 55%
+),
+radial-gradient(circle at 60% 80%, #fbc2eb 30%, rgba(251, 194, 235, 0) 70%),
+radial-gradient(
+    circle at 50% 50%,
+    #a1c4fd 40%,
+    rgba(161, 196, 253, 0.3) 80%
+),
+radial-gradient(circle at 50% 50%, #c3cfe2, rgba(195, 207, 226, 0.5) 100%);
+```
+
+```html
+background: radial-gradient(
+      circle at 20% 40%, 
+      #ffb6c1 20%, 
+      rgba(255, 182, 193, 0) 50%
+    ),
+    radial-gradient(
+      circle at 80% 30%, 
+      rgba(123, 104, 238, 0.3) 25%, 
+      rgba(123, 104, 238, 0) 55%
+    ),
+    radial-gradient(
+      circle at 60% 70%, 
+      #f9fb98 30%, 
+      rgba(152, 251, 152, 0) 70%
+    ),
+    radial-gradient(
+      circle at 50% 50%, 
+      #ff7f50 40%, 
+      rgba(255, 127, 80, 0.3) 80%
+    ),
+    radial-gradient(
+      circle at 50% 50%, 
+      #eeec77, 
+      rgba(202, 235, 135, 0.5) 100%
+    );
+```
+
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/global.css
 body {
@@ -848,7 +1067,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .contacts,
 .navigation {
@@ -1066,10 +1284,22 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
 .x {
   margin: 0;
 }
-.links {
+
+.links a {
   position: relative;
   line-height: 20px;
+
+  flex-direction: column;
+
+  display: inline-block; /* Makes them behave like block-level elements */
+  padding: 5px 8px; /* Add padding for a button-like appearance */
+  background-color: #88888859; /* Example background color */
+  color: #333; /* Example text color */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 15px; /* Add rounded corners */
+  margin: 5px; /* Add some spacing between the links */
 }
+
 .body,
 .right-column {
   display: flex;
@@ -1091,7 +1321,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   flex-direction: row;
   padding: 152.5px 1px;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   row-gap: 20px;
   font-size: var(--headline-1-size);
   color: var(--headlines);
@@ -1103,46 +1332,49 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   justify-content: flex-start;
 }
 .center {
-  height: 1032px;
   flex: 1;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
-  padding: 0 71px 962px;
+  padding: 0 71px;
   box-sizing: border-box;
   max-width: 100%;
   max-height: 100%;
+  min-height: 100vh;
 }
 .background,
 .orphic-landing {
   flex-direction: row;
   align-items: flex-start;
 }
+
 .background {
   flex: 1;
   background: radial-gradient(
-      50% 50%at 50% 50%,
-      #d5e2b2 16.67%,
-      rgba(144, 224, 255, 0) 48.34%
+      circle at 25% 25%,
+      #ffefd5 10%,
+      rgba(255, 239, 213, 0) 30%
     ),
     radial-gradient(
-      50% 50%at 50% 50%,
-      rgba(236, 170, 122, 0.1) 50.74%,
-      rgba(169, 96, 238, 0)
+      circle at 75% 35%,
+      rgba(32, 178, 170, 0.3) 30%,
+      rgba(32, 178, 170, 0) 60%
     ),
-    radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
+    radial-gradient(circle at 65% 75%, #e6e6fa 20%, rgba(230, 230, 250, 0) 50%),
     radial-gradient(
-      50% 50%at 50% 50%,
-      #ffcb57 41.18%,
-      rgba(183, 120, 225, 0) 71.99%
+      circle at 50% 50%,
+      #f0e68c 35%,
+      rgba(240, 230, 140, 0.3) 70%
     ),
-    radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
+    radial-gradient(circle at 50% 50%, #ffdab9, rgba(255, 218, 185, 0.5) 100%);
+
   max-width: 100%;
   text-align: center;
   font-size: var(--font-size-mini);
   color: var(--primary-buttons);
   font-family: var(--font-abhaya-libre);
 }
+
 .orphic-landing {
   width: 100%;
   position: relative;
@@ -1267,7 +1499,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <div class="tab-labels">
                 <div class="home">
                   <div class="button-home">
-                    <a class="home1">orphic</a>
+                    <a href="https://www.google.com/" class="home1">orphic</a>
                     <img
                       class="vector-1-stroke"
                       alt=""
@@ -1279,23 +1511,29 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <div class="space"></div>
               <div class="navigation">
                 <div class="dashboard">
-                  <a class="dashboard1">Dashboard</a>
+                  <a class="dashboard1" href="https://www.google.com/"
+                    >Dashboard</a
+                  >
                 </div>
                 <div class="monitoring">
-                  <a class="monitoring1">Monitoring</a>
+                  <a class="monitoring1" href="https://www.google.com/"
+                    >Monitoring</a
+                  >
                 </div>
                 <div class="docs">
-                  <a class="docs1">Docs</a>
-                </div>
+                  <a class="docs1" href="https://www.google.com/">Docs</a>
+                </div> 
                 <div class="contacts">
-                  <a class="contacts1">Contacts</a>
+                  <a class="contacts1" href="https://www.google.com/"
+                    >Contacts</a
+                  >
                 </div>
               </div>
               <div class="space1"></div>
               <div class="tab-labels1">
                 <div class="app">
                   <div class="button-app">
-                    <a class="app1">App</a>
+                    <a class="app1" href="https://www.google.com/">App</a>
                     <img
                       class="vector-1-stroke1"
                       alt=""
@@ -1315,42 +1553,48 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
               <b class="subtitle">Automatic Liquidity Manager</b>
               <div class="buttons">
                 <div class="primarybutton">
-                  <b class="text">Start now</b>
+                  <b class="text" href="https://www.google.com/">Start now</b>
                   <img class="vector-icon" alt="" src="./public/vector.svg" />
                 </div>
                 <div class="secondarybutton">
-                  <b class="text1">Contact </b>
+                  <b class="text1" href="https://www.google.com/">Contact </b>
                   <img
                     class="vector-stroke-icon"
                     alt=""
                     src="./public/vector-stroke.svg"
                   />
-                </div>
-              </div>
+                </div> 
+              </div>  
               <b class="message">
                 <p class="not-financial-advice">Not Financial Advice</p>
                 <p class="all-rights-reserved">2024 © All Rights Reserved</p>
                 <p class="armand-morin">Armand Morin</p>
-              </b>
+              </b> 
             </div>
             <div class="right-column">
-              <img
+              <img 
                 class="shape-and-lines"
                 loading="lazy"
                 alt=""
                 src="./public/shape-and-lines.svg"
               />
-
               <b class="links">
-                <p class="github">Github</p>
-                <p class="linkedin">Linkedin</p>
-                <p class="x">X</p>
+                <a class="github" href="https://www.github.com/armand-morin"
+                  >Github</a
+                >  
+                <a 
+                  class="linkedin"
+                  href="https://www.linkedin.com/in/armand-morin"
+                  >Linkedin</a
+                >
+                <a class="x" href="https://www.twitter.com/armand-morin">X</a>
               </b>
-            </div>
+            </div> 
           </div>
-        </div>
+        </div> 
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
 
