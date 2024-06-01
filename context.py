@@ -1,41 +1,38 @@
-import os, json, git, sys, csv, toml, subprocess
+import os
+import json
+import git
+import csv
+import toml
+import subprocess
 from collections import defaultdict
 
 repo_path = os.path.dirname(os.path.abspath(__file__))
 output_file = "repo_contents.txt"
 
 authorized_extensions = [
-    ".py",
-    ".sh",
-    ".txt",
-    ".ipynb",
-    # ".csv",
-    ".toml",
-    '.css',
-    '.html',
-    ".json",
-    ".md",
+    ".py", ".sh", ".txt", ".ipynb", ".toml", ".css", ".html", ".json", ".md"
 ]
+
+# List of folders to ignore
+ignore_folders = ["test", "out", "__pycache__", "node_modules", "dist", "build"]
 
 # Dictionary to hold word counts by file extension
 word_counts_by_type = defaultdict(int)
-
 
 def write_header(output_file, repo_path):
     header = (
         "This file contains a structured export of the repository at "
         + repo_path
         + " intended to provide full context for a large language model.\n"
-        + " I need you understand in detail and pay a lot of attention to the code in this repository.\n"
+        + " I need you to understand in detail and pay a lot of attention to the code in this repository.\n"
         + "This is a large repository and the code in it is very complex.\n"
         + "Please read the code in this repository carefully and understand it well.\n"
         + " You will need to connect files between the different imports. \n"
-        + "Make some global suggestions if you thik some parts should be changed and can be improved.\n"
+        + "Make some global suggestions if you think some parts should be changed and can be improved.\n"
         + "Below is the project's structure followed by the content of its files.\n\n"
     )
     with open(output_file, "a", encoding="utf-8") as of:
         of.write(header)
-
 
 def capture_tree_structure(repo_path, output_file):
     repo = git.Repo(repo_path)
@@ -61,7 +58,6 @@ def capture_tree_structure(repo_path, output_file):
                 out, _ = process.communicate()
                 of.write(out.decode("utf-8") + "\n")
 
-
 def write_file_contents(path, output_file):
     _, file_extension = os.path.splitext(path)
     if os.path.basename(path) == "context.py" or "__pycache__" in path:
@@ -71,7 +67,7 @@ def write_file_contents(path, output_file):
     try:
         with open(path, "r", encoding="utf-8") as file:
             if file_extension in authorized_extensions:
-                if file_extension in [".py", ".sh", ".txt", ".md"]:
+                if file_extension in [".py", ".sh", ".txt", ".md", ".html", ".css"]:
                     contents = file.read()
                 elif file_extension == ".ipynb":
                     notebook = json.load(file)
@@ -103,12 +99,6 @@ def write_file_contents(path, output_file):
         of.write(contents)
         of.write("\n\n")
 
-    with open(output_file, "a", encoding="utf-8") as of:
-        of.write(f"File: {path}\n")
-        of.write(contents)
-        of.write("\n\n")
-
-
 def walk_repo(repo_path, output_file):
     repo = git.Repo(repo_path)
     tree = repo.tree()
@@ -118,10 +108,9 @@ def walk_repo(repo_path, output_file):
             if (
                 not repo.ignored(file_path)
                 and os.path.splitext(file_path)[1] in authorized_extensions
-                and "__pycache__" not in file_path
+                and not any(ignore_folder in file_path for ignore_folder in ignore_folders)
             ):
                 write_file_contents(file_path, output_file)
-
 
 def analyze_content(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -130,7 +119,6 @@ def analyze_content(file_path):
         word_count = len(contents.split())
         print(f"Total length of context: {character_count:,} characters")
         print(f"Total number of words: {word_count:,} words")
-
 
 def print_word_counts_by_type():
     # Determine the maximum width of the file extension strings for formatting
@@ -143,7 +131,6 @@ def print_word_counts_by_type():
     for ext, count in sorted(word_counts_by_type.items()):
         # Align text left and numbers right, ensuring columns match up
         print(f"{ext:<{max_ext_len}} | {count:10,}")
-
 
 if __name__ == "__main__":
     # Ensure the output file is empty before starting
