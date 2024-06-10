@@ -5,14 +5,15 @@ function login() {
 
   // Simple authentication logic
   if (username === 'armand' && password === 'morin') {
-      // Store a token in localStorage
-      localStorage.setItem('auth', 'true');
-      // Store a flag to indicate that the background should not change
-      localStorage.setItem('backgroundSet', 'true');
-      // Redirect to the secured page (e.g., index.html)
-      window.location.href = '/index.html';
+    // Store a token in localStorage
+    localStorage.setItem('auth', 'true');
+    // Store a flag to indicate that the background should not change
+    localStorage.setItem('backgroundSet', 'true');
+    // Redirect to the secured page (e.g., index.html)
+    window.location.href = '/index.html';
+    localStorage.setItem('auth', 'true');
+    window.location.href = '/index.html';
   } else {
-      alert('Invalid username or password');
   }
 }
 
@@ -34,11 +35,17 @@ function setRandomBackground() {
   }
 }
 
-// Apply the random background if not set
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem('auth') !== 'true') {
-      window.location.href = '/auth/index.html';
-  } else if (!localStorage.getItem('backgroundSet')) {
-      setRandomBackground();
+// Check authentication on every page load
+document.addEventListener('DOMContentLoaded', function() {
+  const protectedPages = 
+  ['/index.html', 
+    '/app/index.html',
+    '/dashboard/index.html',
+    '/docs/index.html', 
+    '/contact/index.html']; // List of pages requiring authentication
+  const currentPath = window.location.pathname;
+
+  if (protectedPages.includes(currentPath) && localStorage.getItem('auth') !== 'true') {
+      window.location.href = '/auth/index.html'; // Redirect to login if not authenticated
   }
 });

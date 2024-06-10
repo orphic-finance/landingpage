@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Login</title>
-    <link rel="icon" type="image/png" href="public/34.png">
+    <link rel="icon" type="image/png" href="../public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
 </head>
+
 <body>
-    <div class="login">
-        <section class="text-field">
-            <div class="field-labels">
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="login-title">Login</h1>
+            <div class="login-field">
                 <label for="username">Username</label>
-            </div>
-            <div class="text-field1">
                 <input type="text" id="username" name="username" required>
             </div>
-        </section>
-        <section class="text-field2">
-            <div class="field-labels">
+            <div class="login-field">
                 <label for="password">Password</label>
-            </div>
-            <div class="text-field1">
                 <input type="password" id="password" name="password" required>
             </div>
-        </section>
-        <div class="button">
-            <button onclick="login()">Login</button>
+            <button class="login-button" onclick="login()">Login</button>
         </div>
     </div>
 
     <script src="../script.js"></script>
 </body>
+
 </html>
