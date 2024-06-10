@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Login</title>
-    <link rel="icon" type="image/png" href="../public/34.png">
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -14,19 +14,72 @@
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1 class="login-title">Login</h1>
-            <div class="login-field">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+    <div class="orphic-landing">
+        <section class="background">
+            <div class="center">
+                <div class="header-tabs">
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/index.html">orphic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="space"></div>
+                        <div class="docs">
+                            <a class="docs1" href="/dashboard/index.html">Dashboard</a>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/index.html">Monitoring</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/app/index.html">App</a>
+                                <img class="vector" alt="" src="./public/vector.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="login">
+                    <section class="text-field">
+                        <div class="field-labels">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="text-field1">
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                    </section>
+                    <section class="text-field2">
+                        <div class="field-labels">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="text-field1">
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                    </section>
+                    <div class="button">
+                        <button onclick="login()">Login</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="login-field">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button class="login-button" onclick="login()">Login</button>
-        </div>
+        </section>
     </div>
 
     <script src="../script.js"></script>

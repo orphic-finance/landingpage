@@ -1,3 +1,8 @@
+// Initialize auth status to false on first visit or if not set
+if (!localStorage.getItem('auth')) {
+  localStorage.setItem('auth', 'false');
+}
+
 // Login function
 function login() {
   const username = document.getElementById('username').value;
