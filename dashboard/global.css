@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-abhaya-libre: "Abhaya Libre";
+  
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-mini: 15px;
+  
+    /* Colors */
+    --white: #fff;
+    --color-gray-100: #11253e;
+    --secondary-buttons: #0a2540;
+    --color-gray-200: rgba(0, 0, 0, 0.24);
+    --color-gray-300: rgba(0, 0, 0, 0.72);
+    --color-gray-400: rgba(0, 0, 0, 0.3);
+    --color-darkslategray: rgba(51, 51, 51, 0.3);
+  
+    /* Gaps */
+    --gap-3xs: 10px;
+    --gap-11xs-9: 1.9px;
+  
+    /* Paddings */
+    --padding-16xl: 35px;
+    --padding-xl: 20px;
+    --padding-45xl: 64px;
+    --padding-80xl: 99px;
+    --padding-125xl: 144px;
+    --padding-65xl: 84px;
+    --padding-9xs-5: 3.5px;
+    --padding-lgi: 19px;
+    --padding-18xl: 37px;
+    --padding-7xs-5: 5.5px;
+    --padding-2xl: 21px;
+  
+    /* Border radiuses */
+    --br-81xl: 100px;
+  }
+  

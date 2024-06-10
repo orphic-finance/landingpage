@@ -12,12 +12,16 @@ body {
   --font-size-xs: 12px;
   --font-size-mini: 15px;
   --headline-1-size: 87px;
+  --font-size-xl: 20px;
 
   /* Colors */
   --white: #fff;
   --primary-buttons: #11253e;
+  --secondary-buttons: #0a2540;
   --color-gray-100: #0a2540;
   --color-gray-200: rgba(0, 0, 0, 0.24);
+  --color-gray-300: rgba(0, 0, 0, 0.72);
+  --color-gray-400: rgba(0, 0, 0, 0.3);
   --headlines: rgba(0, 0, 0, 0.72);
 
   /* Gaps */
@@ -33,6 +37,12 @@ body {
   --padding-smi: 13px;
   --padding-7xs-5: 5.5px;
   --padding-2xl: 21px;
+  --padding-xl: 20px;
+  --padding-56xl: 75px;
+  --padding-9xs-5: 3.5px;
+  --padding-4xl: 23px;
+  --padding-3xl: 22px;
+  --padding-18xl: 37px;
 
   /* Border radiuses */
   --br-81xl: 100px;
