@@ -14,6 +14,9 @@ fetch('/creds.json') // Fetch the obfuscated creds.json
       // Hash the entered password
       const hashedPassword = CryptoJS.SHA256(password).toString();
 
+      console.log(creds.username, creds.password, username, password);
+      console.log(username, password);
+
       // Compare hashed values (case-sensitive!)
       if (username === creds.username && hashedPassword === creds.password) {
         // Store a token in localStorage
