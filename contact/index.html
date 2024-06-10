@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Contact Page</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -13,6 +14,13 @@
 </head>
 
 <body>
+    <script>
+        // Redirect to login page if not authenticated
+        if (localStorage.getItem('auth') !== 'true') {
+            window.location.href = '/auth/index.html';
+        }
+    </script>
+
     <div class="orphic-landing">
         <section class="background">
             <div class="center">
@@ -84,4 +92,5 @@
     </div>
     <script src="../script.js"></script>
 </body>
+
 </html>

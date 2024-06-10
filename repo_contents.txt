@@ -497,6 +497,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <title>Orphic Finance</title>
+  <link rel="icon" type="image/png" href="public/34.png">
   <base href="/">
   <link rel="stylesheet" href="./global.css" />
   <link rel="stylesheet" href="./index.css" />
@@ -505,6 +506,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
 </head>
 
 <body>
+  <script>
+    // Redirect to login page if not authenticated
+    if (localStorage.getItem('auth') !== 'true') {
+        window.location.href = '/auth/index.html';
+    }
+  </script>
+
   <div class="orphic-landing">
     <section class="background">
       <div class="center"> 
@@ -583,8 +591,9 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
       </div>
     </section>
   </div>
+  <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
+
 
 </html>
 
@@ -640,6 +649,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/app/index.html
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>App</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -648,6 +658,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/app/index.html
 </head>
 
 <body>
+    <script>
+        // Redirect to login page if not authenticated
+        if (localStorage.getItem('auth') !== 'true') {
+            window.location.href = '/auth/index.html';
+        }
+    </script>
+
     <div class="orphic-landing">
         <section class="background">
             <div class="center">
@@ -705,57 +722,52 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/app/index.html
     </div>
     </section>
     </div>
+    <script src="../script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/auth/index.html
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Login</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
 </head>
-
 <body>
     <div class="login">
         <section class="text-field">
             <div class="field-labels">
-                <a class="label">Username</a>
-                <div class="password-hide-see">
-                </div>
+                <label for="username">Username</label>
             </div>
             <div class="text-field1">
-                <div class="inputs">
-                    <div class="inputs-child"></div>
-                </div>
+                <input type="text" id="username" name="username" required>
             </div>
         </section>
         <section class="text-field2">
-            <div class="label-parent">
-                <b class="label1">Password</b>
+            <div class="field-labels">
+                <label for="password">Password</label>
             </div>
-            <div class="text-field3">
-                <div class="inputs1">
-                    <div class="inputs-item"></div>
-                </div>
+            <div class="text-field1">
+                <input type="password" id="password" name="password" required>
             </div>
         </section>
         <div class="button">
-            <a class="login1">Login</a>
+            <button onclick="login()">Login</button>
         </div>
     </div>
-</body>
 
+    <script src="../script.js"></script>
+</body>
 </html>
+
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.html
 <!DOCTYPE html>
@@ -765,6 +777,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.html
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Contact Page</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -773,6 +786,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.html
 </head>
 
 <body>
+    <script>
+        // Redirect to login page if not authenticated
+        if (localStorage.getItem('auth') !== 'true') {
+            window.location.href = '/auth/index.html';
+        }
+    </script>
+
     <div class="orphic-landing">
         <section class="background">
             <div class="center">
@@ -842,8 +862,8 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.html
     </div>
     </section>
     </div>
+    <script src="../script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
 
@@ -855,6 +875,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/index.htm
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Dashboard Page</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -863,6 +884,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/index.htm
 </head>
 
 <body>
+    <script>
+        // Redirect to login page if not authenticated
+        if (localStorage.getItem('auth') !== 'true') {
+            window.location.href = '/auth/index.html';
+        }
+    </script>
+
     <div class="orphic-landing">
         <section class="background">
             <div class="center">
@@ -934,8 +962,8 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/index.htm
     </div>
     </section>
     </div>
+    <script src="../script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
 
@@ -947,6 +975,7 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/index.html
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Docs Page</title>
+    <link rel="icon" type="image/png" href="public/34.png">
     <base href="/">
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="../index.css" />
@@ -955,6 +984,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/index.html
 </head>
 
 <body>
+    <script>
+        // Redirect to login page if not authenticated
+        if (localStorage.getItem('auth') !== 'true') {
+            window.location.href = '/auth/index.html';
+        }
+    </script>
+
     <div class="orphic-landing">
         <section class="background">
             <div class="center">
@@ -1020,8 +1056,8 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/index.html
 
     </section>
     </div>
+    <script src="../script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
 
