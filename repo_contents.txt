@@ -36,13 +36,17 @@ body {
 :root {
   /* fonts */
   --font-abhaya-libre: "Abhaya Libre";
+  --font-abril-fatface: "Abril Fatface";
   --headline-1: "Abril Fatface";
 
   /* font sizes */
-  --font-size-xs: 12px;
+  --font-size-xs  : 12px;
+  --font-size-sm  : 14px;
   --font-size-mini: 15px;
+  --font-size-base: 16px;
+  --font-size-lg  : 18px;
+  --font-size-xl  : 20px;
   --headline-1-size: 87px;
-  --font-size-xl: 20px;
 
   /* Colors */
   --white: #fff;
@@ -55,27 +59,36 @@ body {
   --headlines: rgba(0, 0, 0, 0.72);
 
   /* Gaps */
-  --gap-5xs: 8px;
   --gap-11xs-9: 1.9px;
+  --gap-9xs: 4px;
+  --gap-5xs: 8px;
+  --gap-3xs: 10px;
 
   /* Paddings */
-  --padding-16xl: 35px;
-  --padding-45xl: 64px;
-  --padding-80xl: 99px;
-  --padding-15xl: 34px;
-  --padding-13xl: 32px;
-  --padding-smi: 13px;
-  --padding-7xs-5: 5.5px;
-  --padding-2xl: 21px;
-  --padding-xl: 20px;
-  --padding-56xl: 75px;
+  --padding-10xs: 3px;
   --padding-9xs-5: 3.5px;
-  --padding-4xl: 23px;
+  --padding-7xs-5: 5.5px;
+  --padding-smi: 13px;
+
+  --padding-lgi: 19px;
+  --padding-xl: 20px;
+  --padding-2xl: 21px;
   --padding-3xl: 22px;
+  --padding-4xl: 23px;
+
+  --padding-13xl: 32px;
+  --padding-15xl: 34px;
+  --padding-16xl: 35px;
   --padding-18xl: 37px;
+
+  --padding-45xl: 64px;
+  --padding-56xl: 75px;
+  --padding-65xl: 84px;
+  --padding-80xl: 99px;
 
   /* Border radiuses */
   --br-81xl: 100px;
+  --br-xs: 12px;
 }
 
 
@@ -89,13 +102,10 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   font-weight: 700;
   color: inherit;
 }
-.vector-1-stroke {
-  height: 9.4px;
-  width: 6.1px;
-  position: relative;
-  display: none;
-}
 .button-home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex: 1;
   border-radius: var(--br-81xl);
   background-color: var(--color-gray-200);
@@ -104,24 +114,26 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   padding: 0 var(--padding-2xl);
   gap: var(--gap-11xs-9);
 }
-.button-home,
-.home,
-.tab-labels {
+.home {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.home {
   align-self: stretch;
   overflow: hidden;
   flex-direction: row;
 }
 .tab-labels {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 91.1px;
   flex-direction: column;
   padding: var(--padding-7xs-5) 0 0;
   box-sizing: border-box;
 }
+
+
+
 .space {
   height: 44px;
   width: 104px;
@@ -130,42 +142,16 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   flex-shrink: 0;
   display: none;
 }
-.dashboard1 {
-  text-decoration: none;
-  flex: 1;
-  position: relative;
-  line-height: 44px;
-  font-weight: 700;
-  color: inherit;
-}
-.dashboard {
+.docs {
   flex: 1;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 67px;
-}
-.monitoring1 {
-  text-decoration: none;
-  flex: 1;
-  position: relative;
-  line-height: 44px;
-  font-weight: 700;
-  color: inherit;
-}
-.monitoring {
-  flex: 1;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   min-width: 67px;
 }
 .docs1 {
-  margin-left: -2px;
   text-decoration: none;
   flex: 1;
   position: relative;
@@ -174,125 +160,41 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   color: inherit;
   display: inline-block;
 }
-.docs {
-  flex: 1;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 67px;
-}
-.contacts1 {
-  margin-left: -16px;
-  text-decoration: none;
-  width: 103px;
-  position: relative;
-  line-height: 44px;
-  font-weight: 700;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.contacts,
+
+
 .navigation {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-}
-.contacts {
-  width: 76px;
-  overflow: hidden;
-  flex-shrink: 0;
-  justify-content: flex-start;
-}
-.navigation {
   width: 385px;
   justify-content: center;
   row-gap: 20px;
   max-width: 100%;
   color: var(--color-gray-100);
 }
-.app1,
-.space1 {
-  position: relative;
-}
-.space1 {
-  height: 44px;
-  width: 103px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: none;
-}
-.app1 {
-  text-decoration: none;
-  flex: 1;
-  letter-spacing: 0.01em;
-  line-height: 33px;
-  font-weight: 700;
-  color: inherit;
-}
-.vector-1-stroke1 {
-  height: 9.4px;
-  width: 6.1px;
-  position: relative;
-  display: none;
-}
-.app,
-.button-app {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.button-app {
-  flex: 1;
-  border-radius: var(--br-81xl);
-  background-color: var(--color-gray-200);
-  padding: 0 var(--padding-2xl);
-  gap: var(--gap-11xs-9);
-}
-.app {
-  align-self: stretch;
-}
-.header-tabs,
-.header-tabs-wrapper,
-.tab-labels1 {
+
+
+.header-tabs {
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
-}
-.tab-labels1 {
-  width: 91.1px;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-7xs-5) 0 0;
-}
-.header-tabs,
-.header-tabs-wrapper {
   flex-direction: row;
   max-width: 100%;
-}
-.header-tabs {
   flex: 1;
   justify-content: center;
   padding: var(--padding-smi) 0;
   gap: 103.5px;
   flex-shrink: 0;
-}
-.header-tabs-wrapper {
   align-self: stretch;
-  justify-content: flex-end;
-  padding: 0 73px 0 74px;
 }
-.finance,
-.orphic {
-  margin: 0;
-}
+
+
+
+
+
 .headline {
+  position: relative;
+  display: inline-block;
   margin: 0;
   width: 569px;
   font-size: inherit;
@@ -304,31 +206,24 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   max-width: 103%;
   flex-shrink: 0;
 }
-.headline,
-.subtitle,
-.text {
+.subtitle {
   position: relative;
   display: inline-block;
-}
-.subtitle {
   width: 312px;
   font-size: 18px;
   line-height: 34px;
   mix-blend-mode: luminosity;
 }
 .text {
+  position: relative;
+  display: inline-block;
   flex: 1;
   letter-spacing: 0.01em;
   line-height: 30px;
   font-weight: 700;
   min-width: 68px;
 }
-.vector-icon {
-  height: 9.4px;
-  width: 6.1px;
-  position: relative;
-  display: none;
-}
+
 .primarybutton {
   flex: 1;
   border-radius: var(--br-81xl);
@@ -350,20 +245,18 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   display: inline-block;
   min-width: 50px;
 }
-.vector-stroke-icon {
+.vector {
   height: 9.4px;
   width: 6.1px;
   position: relative;
   display: none;
 }
-.buttons,
+
 .secondarybutton {
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.secondarybutton {
   height: 33px;
   border-radius: var(--br-81xl);
   justify-content: flex-start;
@@ -373,15 +266,18 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   color: var(--color-gray-100);
 }
 .buttons {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 174px;
   justify-content: center;
   gap: 4px;
   font-size: var(--font-size-mini);
   color: var(--white);
 }
-.all-rights-reserved,
-.armand-morin,
-.not-financial-advice {
+
+.warn {
   margin: 0;
 }
 .message {
@@ -401,15 +297,13 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   min-width: 557px;
   max-width: 100%;
 }
-.shape-and-lines {
+.shape {
   width: 229.4px;
   flex: 1;
   position: relative;
   max-height: 100%;
 }
-.github,
-.linkedin,
-.x {
+.web {
   margin: 0;
 }
 
@@ -453,12 +347,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   font-size: var(--headline-1-size);
   color: var(--headlines);
 }
-.background,
-.center,
-.orphic-landing {
-  display: flex;
-  justify-content: flex-start;
-}
 .center {
   flex: 1;
   overflow: hidden;
@@ -469,11 +357,6 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   max-width: 100%;
   max-height: 100%;
   min-height: 100vh;
-}
-.background,
-.orphic-landing {
-  flex-direction: row;
-  align-items: flex-start;
 }
 
 .background {
@@ -501,6 +384,12 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
   font-size: var(--font-size-mini);
   color: var(--primary-buttons);
   font-family: var(--font-abhaya-libre);
+}
+
+.orphic {
+  margin: 0;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .orphic-landing {
@@ -603,129 +492,101 @@ File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.css
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/index.html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="orphic-landing">
-      <section class="background">
-        <div class="center">
-          <div class="header-tabs-wrapper">
-            <div class="header-tabs">
-              <div class="tab-labels">
-                <div class="home">
-                  <div class="button-home">
-                    <a href="https://www.google.com/" class="home1">orphic</a>
-                    <img
-                      class="vector-1-stroke"
-                      alt=""
-                      src="./public/vector-1-stroke.svg"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="space"></div>
-              <div class="navigation">
-                <div class="dashboard">
-                  <a class="dashboard1" href="https://www.google.com/"
-                    >Dashboard</a
-                  >
-                </div>
-                <div class="monitoring">
-                  <a class="monitoring1" href="https://www.google.com/"
-                    >Monitoring</a
-                  >
-                </div>
-                <div class="docs">
-                  <a class="docs1" href="https://www.google.com/">Docs</a>
-                </div>
-                <div class="contacts">
-                  <a class="contacts1" href="https://www.google.com/"
-                    >Contacts</a
-                  >
-                </div>
-              </div>
-              <div class="space1"></div>
-              <div class="tab-labels1">
-                <div class="app">
-                  <div class="button-app">
-                    <a class="app1" href="https://www.google.com/">App</a>
-                    <img
-                      class="vector-1-stroke1"
-                      alt=""
-                      src="./public/vector-1-stroke1.svg"
-                    />
-                  </div>
-                </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <title>Orphic Finance</title>
+  <base href="/">
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="orphic-landing">
+    <section class="background">
+      <div class="center"> 
+        <div class="header-tabs"> 
+
+          <div class="tab-labels"> 
+            <div class="home">
+              <div class="button-home">
+                <a class="home1" href="/index.html" >orphic</a>
               </div>
             </div>
           </div>
-          <div class="body">
-            <div class="left-column">
-              <h1 class="headline">
-                <p class="orphic">Orphic</p>
-                <p class="finance">Finance</p>
-              </h1>
-              <b class="subtitle">Automatic Liquidity Manager</b>
-              <div class="buttons">
-                <div class="primarybutton">
-                  <b class="text" href="https://www.google.com/">Start now</b>
-                  <img class="vector-icon" alt="" src="./public/vector.svg" />
-                </div>
-                <div class="secondarybutton">
-                  <b class="text1" href="https://www.google.com/">Contact </b>
-                  <img
-                    class="vector-stroke-icon"
-                    alt=""
-                    src="./public/vector-stroke.svg"
-                  />
-                </div>
-              </div> 
-              <b class="message">
-                <p class="not-financial-advice">Not Financial Advice</p>
-                <p class="all-rights-reserved">2024 © All Rights Reserved</p>
-                <p class="armand-morin">Armand Morin</p>
-              </b>
+          
+          <div class="navigation">
+            <div class="space"></div>
+            <div class="docs">
+              <a class="docs1" href="/dashboard/index.html">Dashboard</a>
             </div>
-            <div class="right-column"> 
-              <img
-                class="shape-and-lines"
-                loading="lazy"
-                alt=""
-                src="./public/shape-and-lines.svg"
-              />
-              <b class="links">
-                <a class="github" href="https://www.github.com/armand-morin"
-                  >Github</a
-                >
-                <a
-                  class="linkedin"
-                  href="https://www.linkedin.com/in/armand-morin"
-                  >Linkedin</a
-                > 
-                <a class="x" href="https://www.twitter.com/armand-morin">X</a>
-              </b>
-            </div>  
-          </div> 
-        </div>
-      </section>  
-    </div> 
-  </body>
-  <script src="./script.js"></script>
-</html>
+            <div class="docs">
+              <li><a class="docs1" href="/index.html">Monitoring</a></li>
+            </div>
+            <div class="docs">
+              <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+            </div>
+            <div class="docs">
+              <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+            </div>
+            <div class="space"></div>
+          </div>
 
+
+          <div class="tab-labels">   
+            <div class="home">
+              <div class="button-home">
+                <a class="home1" href="/app/index.html">App</a>
+                <img class="vector" alt="" src="./public/vector.svg" />
+              </div>
+            </div> 
+          </div> 
+
+        </div> 
+        
+        <div class="body"> 
+          <div class="left-column"> 
+            <h1 class="headline">
+              <p class="orphic">Orphic</p>
+              <p class="orphic">Finance</p>
+            </h1>
+            <b class="subtitle">Automatic Liquidity Manager</b>
+            <div class="buttons">
+              <div class="primarybutton">
+                <b class="text" href="/app/index.html">Start now</b>
+                <img class="vector" alt="" src="./public/vector.svg" />
+              </div>
+              <div class="secondarybutton">
+                <b class="text1" href="/contact/index.html">Contact </b>
+                <img class="vector" alt="" src="./public/vector.svg" />
+              </div>
+            </div>
+            <b class="message">
+              <p class="warn">Not Financial Advice</p>
+              <p class="warn">Orphic&copy; 2024 All Rights Reserved</p>
+              <p class="warn">Armand Morin</p>
+            </b>
+          </div>
+          <div class="right-column">
+            <img class="shape" loading="lazy" alt="" src="./public/shape.svg" />
+            <b class="links">
+              <a class="web" href="https://www.github.com/armand-morin">Github</a>
+              <a class="web" href="https://www.linkedin.com/in/armand-morin">Linkedin</a>
+              <a class="web" href="https://www.twitter.com/armand-morin">X</a>
+            </b>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/README.md
 # orphic finance landing page
@@ -771,1943 +632,396 @@ rgba(202, 235, 135, 0.5) 100% );
 ```
 
 
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/auth/global.css
-body {
-    margin: 0;
-    line-height: normal;
-  }
-  
-  :root {
-    /* fonts */
-    --font-abril-fatface: "Abril Fatface";
-    --font-poppins: Poppins;
-    --font-abhaya-libre: "Abhaya Libre";
-  
-    /* font sizes */
-    --font-size-sm: 14px;
-    --font-size-base: 16px;
-    --font-size-lg: 18px;
-    --font-size-xl: 20px;
-  
-    /* Colors */
-    --white: #fff;
-    --color-gray-100: #111;
-    --color-gray-200: rgba(255, 255, 255, 0.3);
-    --headlines: rgba(0, 0, 0, 0.72);
-    --color-dimgray: rgba(102, 102, 102, 0.8);
-  
-    /* Gaps */
-    --gap-9xs: 4px;
-  
-    /* Paddings */
-    --padding-xl: 20px;
-    --padding-10xs: 3px;
-  
-    /* Border radiuses */
-    --br-xs: 12px;
-  }
-  
+File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/app/index.html
+<!DOCTYPE html>
+<html>
 
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/auth/index.css
-.label {
-    text-decoration: none;
-    position: relative;
-    font-weight: 700;
-    color: inherit;
-    display: inline-block;
-    min-width: 84px;
-  }
-  .hide,
-  .icon {
-    position: absolute;
-  }
-  .icon {
-    top: 3px;
-    right: 49px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-  }
-  .hide {
-    top: 0;
-    right: 0;
-  }
-  .password-hide-see {
-    height: 27px;
-    width: 73px;
-    position: relative;
-    display: none;
-    text-align: right;
-    font-size: var(--font-size-lg);
-    color: var(--color-dimgray);
-    font-family: var(--font-poppins);
-  }
-  .field-labels {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-10xs);
-    font-family: var(--font-abhaya-libre);
-  }
-  .div {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-  }
-  .inputs-child {
-    height: 24px;
-    width: 1px;
-    position: relative;
-    background-color: var(--color-gray-100);
-  }
-  .icons,
-  .inputs {
-    position: absolute;
-    display: none;
-  }
-  .inputs {
-    top: 15px;
-    left: 24px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .icons {
-    top: 40px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-  }
-  .text-field1 {
-    align-self: stretch;
-    height: 56px;
-    position: relative;
-    border-radius: var(--br-xs);
-    background-color: var(--color-gray-200);
-    border: 1px solid var(--headlines);
-    box-sizing: border-box;
-    overflow: hidden;
-    flex-shrink: 0;
-    font-size: var(--font-size-base);
-    color: var(--color-gray-100);
-  }
-  .error-message {
-    width: 101px;
-    position: relative;
-    font-size: var(--font-size-sm);
-    color: var(--color-crimson);
-    display: none;
-  }
-  .text-field {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-9xs);
-    text-align: left;
-    font-size: var(--font-size-xl);
-    color: var(--headlines);
-    font-family: var(--font-poppins);
-  }
-  .label1 {
-    position: relative;
-    font-weight: 700;
-    display: inline-block;
-    min-width: 80px;
-  }
-  .hide1,
-  .icon1 {
-    position: absolute;
-  }
-  .icon1 {
-    top: 3px;
-    right: 49px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-  }
-  .hide1 {
-    top: 0;
-    right: 0;
-  }
-  .password-hide-see1 {
-    height: 27px;
-    width: 73px;
-    position: relative;
-    display: none;
-    text-align: right;
-    font-size: var(--font-size-lg);
-    color: var(--color-dimgray);
-    font-family: var(--font-poppins);
-  }
-  .label-parent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 var(--padding-10xs);
-    font-family: var(--font-abhaya-libre);
-  }
-  .div1 {
-    align-self: stretch;
-    flex: 1;
-    position: relative;
-  }
-  .inputs-item {
-    height: 24px;
-    width: 1px;
-    position: relative;
-    background-color: var(--color-gray-100);
-  }
-  .icons1,
-  .inputs1 {
-    position: absolute;
-    display: none;
-  }
-  .inputs1 {
-    top: 15px;
-    left: 24px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .icons1 {
-    top: 40px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-  }
-  .text-field3 {
-    align-self: stretch;
-    height: 56px;
-    position: relative;
-    border-radius: var(--br-xs);
-    background-color: var(--color-gray-200);
-    border: 1px solid var(--headlines);
-    box-sizing: border-box;
-    overflow: hidden;
-    flex-shrink: 0;
-    font-size: var(--font-size-base);
-    color: var(--color-gray-100);
-  }
-  .error-message1 {
-    width: 101px;
-    position: relative;
-    font-size: var(--font-size-sm);
-    color: var(--color-crimson);
-    display: none;
-  }
-  .text-field2 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-9xs);
-    text-align: left;
-    font-size: var(--font-size-xl);
-    color: var(--headlines);
-    font-family: var(--font-poppins);
-  }
-  .login1 {
-    margin-top: -16.5px;
-    text-decoration: none;
-    position: relative;
-    letter-spacing: -0.04em;
-    line-height: 96px;
-    color: inherit;
-    display: inline-block;
-    mix-blend-mode: multiply;
-    min-width: 86px;
-  }
-  .button,
-  .login {
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
-  .button {
-    align-self: stretch;
-    height: 64px;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.6);
-    flex-shrink: 0;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 var(--padding-xl);
-  }
-  .login {
-    width: 100%;
-    position: relative;
-    border-radius: 24px;
-    background-color: var(--white);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 60.5px 75px 119.5px;
-    gap: 24px;
-    mix-blend-mode: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    font-size: 35px;
-    color: var(--headlines);
-    font-family: var(--font-abril-fatface);
-  }
-  @media screen and (max-width: 450px) {
-    .label,
-    .label1 {
-      font-size: var(--font-size-base);
-    }
-  }
-  @media screen and (max-width: 339px) {
-    .login {
-      padding-left: var(--padding-xl);
-      padding-right: var(--padding-xl);
-      box-sizing: border-box;
-    }
-  }
-  
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>App</title>
+    <base href="/">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
+
+<body>
+    <div class="orphic-landing">
+        <section class="background">
+            <div class="center">
+                <div class="header-tabs">
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/index.html">orphic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="space"></div>
+                        <div class="docs">
+                            <a class="docs1" href="/dashboard/index.html">Dashboard</a>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/index.html">Monitoring</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/app/index.html">App</a>
+                                <img class="vector" alt="" src="./public/vector.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="body">
+                    <div class="left-column">
+                        <b class="subtitle">Coming Soon ...</b>
+
+                        <b class="message">
+                            <p class="not-financial-advice">Not Financial Advice</p>
+                            <p class="all-rights-reserved">Orphic&copy; 2024 All Rights Reserved</p>
+                            <p class="armand-morin">Armand Morin</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/auth/index.html
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Login</title>
+    <base href="/">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
-    />
-  </head>
-  <body>
+<body>
     <div class="login">
-      <section class="text-field">
-        <div class="field-labels">
-          <a class="label">Username</a>
-          <div class="password-hide-see">
-            <img class="icon" alt="" src="./public/icon.svg" />
-
-            <div class="hide">Hide</div>
-          </div>
+        <section class="text-field">
+            <div class="field-labels">
+                <a class="label">Username</a>
+                <div class="password-hide-see">
+                </div>
+            </div>
+            <div class="text-field1">
+                <div class="inputs">
+                    <div class="inputs-child"></div>
+                </div>
+            </div>
+        </section>
+        <section class="text-field2">
+            <div class="label-parent">
+                <b class="label1">Password</b>
+            </div>
+            <div class="text-field3">
+                <div class="inputs1">
+                    <div class="inputs-item"></div>
+                </div>
+            </div>
+        </section>
+        <div class="button">
+            <a class="login1">Login</a>
         </div>
-        <div class="text-field1">
-          <div class="inputs">
-            <div class="div">123456</div>
-            <div class="inputs-child"></div>
-          </div>
-          <img class="icons" alt="" src="./public/icons.svg" />
-        </div>
-        <div class="error-message">Error message</div>
-      </section>
-      <section class="text-field2">
-        <div class="label-parent">
-          <b class="label1">Password</b>
-        </div>
-        <div class="text-field3">
-          <div class="inputs1">
-            <div class="div1">123456</div>
-            <div class="inputs-item"></div>
-          </div>
-          <img class="icons1" alt="" src="./public/icons.svg" />
-        </div>
-      </section>
-      <div class="button">
-        <a class="login1">Login</a>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
-
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/global.css
-body {
-    margin: 0;
-    line-height: normal;
-  }
-  
-  :root {
-    /* fonts */
-    --font-abhaya-libre: "Abhaya Libre";
-    --font-abril-fatface: "Abril Fatface";
-  
-    /* font sizes */
-    --font-size-mini: 15px;
-  
-    /* Colors */
-    --white: #fff;
-    --color-gray-100: #11253e;
-    --secondary-buttons: #0a2540;
-    --color-gray-200: rgba(0, 0, 0, 0.24);
-    --headlines: rgba(0, 0, 0, 0.72);
-  
-    /* Gaps */
-    --gap-11xs-9: 1.9px;
-  
-    /* Paddings */
-    --padding-53xl: 72px;
-    --padding-17xl: 36px;
-    --padding-xl: 20px;
-    --padding-7xs-5: 5.5px;
-    --padding-2xl: 21px;
-  
-    /* Border radiuses */
-    --br-81xl: 100px;
-  }
-  
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.css
-.home {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-home,
-  .home-app-buttons {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .button-home {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-  }
-  .home-app-buttons {
-    width: 91.1px;
-    flex-direction: column;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .dashboard,
-  .docs1,
-  .monitoring {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .docs1 {
-    margin-left: -2px;
-    display: inline-block;
-  }
-  .docs {
-    flex: 1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts2 {
-    margin-left: -16px;
-    text-decoration: none;
-    width: 103px;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    debug_commit: 69da668;
-  }
-  .contacts1,
-  .content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts1 {
-    width: 76px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .content {
-    margin: 0;
-    width: 385px;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--secondary-buttons);
-    font-family: var(--font-abhaya-libre);
-  }
-  .app {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke1 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-app,
-  .home-app-buttons1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .button-app {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-    z-index: 1;
-  }
-  .home-app-buttons1 {
-    width: 91.1px;
-    flex-direction: column;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .buttons,
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .buttons {
-    flex: 1;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .navigation {
-    width: 918.7px;
-    justify-content: flex-start;
-    padding: 0 var(--padding-53xl);
-    box-sizing: border-box;
-    top: 0;
-    z-index: 99;
-    position: sticky;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--color-gray-100);
-    font-family: var(--font-abhaya-libre);
-  }
-  .space,
-  .space1 {
-    width: 104px;
-    height: 44px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
-  .space1 {
-    width: 103px;
-  }
-  .union-icon {
-    height: 295.5px;
-    width: 221.6px;
-    position: relative;
-  }
-  .right-column {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 460px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 181.3px var(--padding-xl) 181.2px;
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .headline {
-    margin: 0;
-    position: absolute;
-    top: 69px;
-    left: 454px;
-    font-size: inherit;
-    letter-spacing: -0.04em;
-    line-height: 96px;
-    font-weight: 400;
-    font-family: var(--font-abril-fatface);
-    display: inline-block;
-    width: 569px;
-    mix-blend-mode: luminosity;
-    z-index: 1;
-  }
-  .for-any-additional {
-    display: block;
-    white-space: pre-wrap;
-  }
-  .armand-morinberkeleyedu,
-  .blank-line,
-  .linkedincominarmand-morin {
-    display: block;
-  }
-  .subtitle {
-    margin: 0;
-    position: absolute;
-    top: 245px;
-    left: 582.5px;
-    font-size: 20px;
-    line-height: 34px;
-    font-weight: 700;
-    display: inline-block;
-    width: 312px;
-    mix-blend-mode: luminosity;
-    max-height: 204px;
-    word-break: break-word;
-  }
-  .all-rights-reserved,
-  .armand-morin,
-  .not-financial-advice {
-    margin: 0;
-  }
-  .message {
-    position: absolute;
-    top: 529px;
-    left: 672px;
-    font-size: 12px;
-    line-height: 20px;
-  }
-  .sidebar {
-    align-self: stretch;
-    height: 658px;
-    position: relative;
-    max-width: 100%;
-    text-align: center;
-    font-size: 64px;
-    color: var(--headlines);
-    font-family: var(--font-abhaya-libre);
-  }
-  .background,
-  .contacts {
-    box-sizing: border-box;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .background {
-    flex: 1;
-    background: radial-gradient(
-        50% 50%at 50% 50%,
-        #d5e2b2 16.67%,
-        rgba(144, 224, 255, 0) 48.34%
-      ),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        rgba(236, 170, 122, 0.1) 50.74%,
-        rgba(169, 96, 238, 0)
-      ),
-      radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        #ffcb57 41.18%,
-        rgba(183, 120, 225, 0) 71.99%
-      ),
-      radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
-    flex-direction: column;
-    padding: 13px 66px 151.5px var(--padding-53xl);
-    gap: 165.5px;
-    max-width: 100%;
-  }
-  .contacts {
-    width: 100%;
-    position: relative;
-    background-color: var(--white);
-    border: 1px solid #000;
-    overflow: auto;
-    flex-direction: row;
-    line-height: normal;
-    letter-spacing: normal;
-  }
-  @media screen and (max-width: 925px) {
-    .navigation {
-      padding-left: var(--padding-17xl);
-      padding-right: var(--padding-17xl);
-      box-sizing: border-box;
-    }
-    .headline {
-      font-size: 51px;
-      line-height: 77px;
-    }
-    .background {
-      padding-top: var(--padding-xl);
-      padding-bottom: 98px;
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    .content {
-      display: none;
-    }
-    .background {
-      gap: 83px;
-      padding-left: var(--padding-17xl);
-      padding-right: 33px;
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .headline {
-      font-size: 38px;
-      line-height: 58px;
-    }
-    .subtitle {
-      font-size: 16px;
-      line-height: 27px;
-    }
-    .background {
-      gap: 41px;
-      padding-bottom: 64px;
-      box-sizing: border-box;
-    }
-  }
-  
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/contact/index.html
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Contact Page</title>
+    <base href="/">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="contacts">
-      <main class="background">
-        <header class="navigation">
-          <div class="buttons">
-            <div class="home-app-buttons">
-              <div class="button-home">
-                <a class="home">orphic</a>
-                <img
-                  class="vector-1-stroke"
-                  alt=""
-                  src="./public/vector-1-stroke.svg"
-                />
-              </div>
+<body>
+    <div class="orphic-landing">
+        <section class="background">
+            <div class="center">
+                <div class="header-tabs">
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/index.html">orphic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="space"></div>
+                        <div class="docs">
+                            <a class="docs1" href="/dashboard/index.html">Dashboard</a>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/index.html">Monitoring</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/app/index.html">App</a>
+                                <img class="vector" alt="" src="./public/vector.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="body">
+                    <div class="right-column">
+                        <img class="shape-and-lines" loading="lazy" alt="" src="../public/union.svg" />
+                    </div>
+                    <div class="left-column">
+                        <h1 class="headline">Contact</h1>
+                        <p class="subtitle">
+                            <span class="for-any-additional">For any additional details, info request, partnership or
+                                other, please contact me
+                            </span>
+                        </p>
+                        <button href="mailto:armand_morin@berkeley.edu"
+                            class="button-home">armand_morin@berkeley.edu</button>
+                        <button href="https://www.linkedin.com/in/armand-morin" class="button-home">
+                            linkedin.com/in/armand-morin</button>
+                        <b class="message">
+                            <p class="not-financial-advice">Not Financial Advice</p>
+                            <p class="all-rights-reserved">Orphic&copy; 2024 All Rights Reserved</p>
+                            <p class="armand-morin">Armand Morin</p>
+                        </b>
+                    </div>
+                </div>
+
             </div>
-            <nav class="content">
-              <a class="dashboard">Dashboard</a>
-              <a class="monitoring">Monitoring</a>
-              <div class="docs">
-                <a class="docs1">Docs</a>
-              </div>
-              <div class="contacts1">
-                <a class="contacts2">Contacts</a>
-              </div>
-            </nav>
-            <div class="home-app-buttons1">
-              <div class="button-app">
-                <a class="app">App</a>
-                <img
-                  class="vector-1-stroke1"
-                  alt=""
-                  src="./public/vector-1-stroke1.svg"
-                />
-              </div>
-            </div>
-          </div>
-        </header>
-        <div class="space"></div>
-        <div class="space1"></div>
-        <section class="sidebar">
-          <div class="right-column">
-            <img
-              class="union-icon"
-              loading="lazy"
-              alt=""
-              src="../public/union.png"
-            />
-          </div>
-          <h1 class="headline">Contact</h1>
-          <p class="subtitle">
-            <span class="for-any-additional"
-              >For any additional details, info request, partnership or other,
-              please contact me
-            </span>
-            <span class="blank-line">&nbsp;</span>
-            <span class="armand-morinberkeleyedu"
-              >armand_morin@berkeley.edu</span
-            >
-            <span class="linkedincominarmand-morin">
-              linkedin.com/in/armand-morin</span
-            >
-          </p>
-          <b class="message">
-            <p class="not-financial-advice">Not Financial Advice</p>
-            <p class="all-rights-reserved">Orphic © 2024 All Rights Reserved</p>
-            <p class="armand-morin">Armand Morin</p>
-          </b>
-        </section>
-      </main>
     </div>
-  </body>
+    </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
 </html>
-
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/global.css
-body {
-    margin: 0;
-    line-height: normal;
-  }
-  
-  :root {
-    /* fonts */
-    --font-abhaya-libre: "Abhaya Libre";
-  
-    /* font sizes */
-    --font-size-xl: 20px;
-    --font-size-mini: 15px;
-  
-    /* Colors */
-    --white: #fff;
-    --color-gray-100: #11253e;
-    --secondary-buttons: #0a2540;
-    --color-gray-200: rgba(0, 0, 0, 0.24);
-    --color-gray-300: rgba(0, 0, 0, 0.72);
-    --color-gray-400: rgba(0, 0, 0, 0.3);
-    --color-darkslategray: rgba(51, 51, 51, 0.3);
-  
-    /* Gaps */
-    --gap-3xs: 10px;
-    --gap-11xs-9: 1.9px;
-  
-    /* Paddings */
-    --padding-16xl: 35px;
-    --padding-xl: 20px;
-    --padding-45xl: 64px;
-    --padding-80xl: 99px;
-    --padding-125xl: 144px;
-    --padding-65xl: 84px;
-    --padding-9xs-5: 3.5px;
-    --padding-lgi: 19px;
-    --padding-18xl: 37px;
-    --padding-7xs-5: 5.5px;
-    --padding-2xl: 21px;
-  
-    /* Border radiuses */
-    --br-81xl: 100px;
-  }
-  
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/index.css
-.space {
-    width: 104px;
-    height: 44px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
-  .home,
-  .space,
-  .space1 {
-    position: relative;
-  }
-  .space1 {
-    width: 103px;
-    height: 44px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
-  .home {
-    text-decoration: none;
-    flex: 1;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-home,
-  .buttons {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .button-home {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-  }
-  .buttons {
-    width: 91.1px;
-    flex-direction: column;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .dashboard1,
-  .docs1,
-  .monitoring {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .docs1 {
-    margin-left: -2px;
-    display: inline-block;
-  }
-  .docs {
-    flex: 1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts1 {
-    margin-left: -16px;
-    text-decoration: none;
-    width: 103px;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    debug_commit: 69da668;
-  }
-  .contacts,
-  .dashboard-parent {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts {
-    width: 76px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .dashboard-parent {
-    margin: 0;
-    width: 385px;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--secondary-buttons);
-    font-family: var(--font-abhaya-libre);
-  }
-  .app {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke1 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-app,
-  .buttons1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .button-app {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-  }
-  .buttons1 {
-    width: 91.1px;
-    flex-direction: column;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .buttons-parent,
-  .center-inner {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .buttons-parent {
-    flex: 1;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .center-inner {
-    width: 922.2px;
-    justify-content: flex-start;
-    padding: 0 74px;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--color-gray-100);
-    font-family: var(--font-abhaya-libre);
-  }
-  .wallet-tracker {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-  }
-  .vector-1-stroke2 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .dash1 {
-    width: 200px;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-400);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-9xs-5) 23px var(--padding-9xs-5) 22px;
-    box-sizing: border-box;
-    gap: var(--gap-3xs);
-    white-space: nowrap;
-  }
-  .pool-monitoring {
-    flex: 1;
-    position: relative;
-    font-size: var(--font-size-xl);
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    font-family: var(--font-abhaya-libre);
-    color: var(--color-gray-300);
-    text-align: center;
-  }
-  .vector-1-stroke3 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .dash2 {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-9xs-5) 30px var(--padding-9xs-5) 29px;
-    background-color: var(--color-gray-400);
-    width: 247px;
-    border-radius: var(--br-81xl);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: var(--gap-3xs);
-    white-space: nowrap;
-  }
-  .dash2:hover,
-  .dash3:hover {
-    background-color: var(--color-darkslategray);
-  }
-  .sniper {
-    flex: 1;
-    position: relative;
-    font-size: var(--font-size-xl);
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    font-family: var(--font-abhaya-libre);
-    color: var(--color-gray-300);
-    text-align: center;
-  }
-  .vector-1-stroke4 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .dash3 {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-9xs-5) var(--padding-lgi) var(--padding-9xs-5) 18px;
-    background-color: var(--color-gray-400);
-    width: 131px;
-    border-radius: var(--br-81xl);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: var(--gap-3xs);
-  }
-  .depth-viz {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-  }
-  .vector-1-stroke5 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .dash4,
-  .left-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-  .dash4 {
-    width: 161px;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-400);
-    overflow: hidden;
-    flex-direction: row;
-    padding: var(--padding-9xs-5) var(--padding-lgi);
-    gap: var(--gap-3xs);
-    white-space: nowrap;
-  }
-  .left-column {
-    flex: 1;
-    flex-direction: column;
-    padding: 128.5px var(--padding-xl);
-    gap: 80px;
-    min-width: 362px;
-    max-width: 100%;
-  }
-  .right-column-child {
-    width: 248.3px;
-    flex: 1;
-    position: relative;
-    max-height: 100%;
-  }
-  .body,
-  .center,
-  .right-column {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .right-column {
-    height: 658px;
-    width: 460px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 222px var(--padding-xl);
-    min-width: 460px;
-  }
-  .body,
-  .center {
-    align-self: stretch;
-    flex-shrink: 0;
-  }
-  .body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 152.5px 1px;
-    row-gap: 20px;
-  }
-  .center {
-    height: 1032px;
-    overflow: hidden;
-    flex-direction: column;
-    padding: 13px 71px 975px;
-    gap: 13px;
-    text-align: center;
-    font-size: var(--font-size-xl);
-    color: var(--color-gray-300);
-    font-family: var(--font-abhaya-libre);
-  }
-  .background,
-  .center,
-  .dashboard {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .background {
-    flex: 1;
-    background: radial-gradient(
-        50% 50%at 50% 50%,
-        #d5e2b2 16.67%,
-        rgba(144, 224, 255, 0) 48.34%
-      ),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        rgba(236, 170, 122, 0.1) 50.74%,
-        rgba(169, 96, 238, 0)
-      ),
-      radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        #ffcb57 41.18%,
-        rgba(183, 120, 225, 0) 71.99%
-      ),
-      radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .dashboard {
-    width: 100%;
-    position: relative;
-    background-color: var(--white);
-    border: 1px solid #000;
-    box-sizing: border-box;
-    overflow: auto;
-    flex-direction: row;
-    line-height: normal;
-    letter-spacing: normal;
-  }
-  @media screen and (max-width: 975px) {
-    .right-column-child {
-      align-self: stretch;
-      width: auto;
-    }
-    .right-column {
-      flex: 1;
-    }
-    .body {
-      flex-wrap: wrap;
-      padding-top: var(--padding-80xl);
-      padding-bottom: var(--padding-80xl);
-      box-sizing: border-box;
-    }
-    .center {
-      height: auto;
-    }
-  }
-  @media screen and (max-width: 950px) {
-    .center-inner {
-      padding-left: var(--padding-18xl);
-      padding-right: var(--padding-18xl);
-      box-sizing: border-box;
-    }
-    .center {
-      padding-top: var(--padding-xl);
-      padding-bottom: 412px;
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    .dashboard-parent {
-      display: none;
-    }
-    .left-column {
-      padding-top: var(--padding-65xl);
-      padding-bottom: var(--padding-65xl);
-      box-sizing: border-box;
-      min-width: 100%;
-    }
-    .right-column {
-      padding-top: var(--padding-125xl);
-      padding-bottom: var(--padding-125xl);
-      min-width: 100%;
-    }
-    .body,
-    .center,
-    .right-column {
-      box-sizing: border-box;
-    }
-    .body {
-      padding-top: var(--padding-45xl);
-      padding-bottom: var(--padding-45xl);
-    }
-    .center {
-      padding-left: var(--padding-16xl);
-      padding-right: var(--padding-16xl);
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .sniper {
-      font-size: 16px;
-      line-height: 74px;
-    }
-    .left-column {
-      gap: 40px;
-    }
-    .right-column {
-      gap: 100px;
-    }
-    .center {
-      padding-bottom: 268px;
-      box-sizing: border-box;
-    }
-  }
-  
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/dashboard/index.html
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Dashboard Page</title>
+    <base href="/">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="dashboard">
-      <main class="background">
-        <section class="center">
-          <div class="space"></div>
-          <div class="space1"></div>
-          <header class="center-inner">
-            <div class="buttons-parent">
-              <div class="buttons">
-                <div class="button-home">
-                  <a class="home">orphic</a>
-                  <img
-                    class="vector-1-stroke"
-                    alt=""
-                    src="../public/vector-1-stroke.png"
-                  />
+<body>
+    <div class="orphic-landing">
+        <section class="background">
+            <div class="center">
+                <div class="header-tabs">
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/index.html">orphic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="space"></div>
+                        <div class="docs">
+                            <a class="docs1" href="/dashboard/index.html">Dashboard</a>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/index.html">Monitoring</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/app/index.html">App</a>
+                                <img class="vector" alt="" src="./public/vector.svg" />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
-              <nav class="dashboard-parent">
-                <a class="dashboard1">Dashboard</a>
-                <a class="monitoring">Monitoring</a>
-                <div class="docs">
-                  <a class="docs1">Docs</a>
+
+                <div class="body">
+                    <div class="left-column">
+                        <button class="button-home">
+                            <b class="wallet-tracker">Wallet Tracker</b>
+                            <img class="vector-1-stroke2" loading="lazy" alt="" src="../public/vector-1-stroke.png" />
+                        </button>
+                        <button class="button-home">
+                            <b class="pool-monitoring">Pooling Monitoring</b>
+                            <img class="vector-1-stroke2" alt="" src="../public/vector-1-stroke.png" />
+                        </button>
+                        <button class="button-home">
+                            <b class="sniper">Sniper</b>
+                            <img class="vector-1-stroke2" alt="" src="../public/vector-1-stroke.png" />
+                        </button>
+                        <button class="button-home">
+                            <b class="depth-viz">Depth Viz</b>
+                            <img class="vector-1-stroke2" loading="lazy" alt="" src="../public/vector-1-stroke-3.png" />
+                        </button>
+                    </div>
+                    <div class="right-column">
+                        <img class="shape-and-lines" loading="lazy" alt="" src="../public/group-2.svg" />
+                    </div>
                 </div>
-                <div class="contacts">
-                  <a class="contacts1">Contacts</a>
-                </div>
-              </nav>
-              <div class="buttons1">
-                <div class="button-app">
-                  <a class="app">App</a>
-                  <img
-                    class="vector-1-stroke1"
-                    alt=""
-                    src="../public/vector-1-stroke1.png"
-                  />
-                </div>
-              </div>
+
             </div>
-          </header>
-          <div class="body">
-            <div class="left-column">
-              <div class="dash1">
-                <b class="wallet-tracker">Wallet Tracker</b>
-                <img
-                  class="vector-1-stroke2"
-                  loading="lazy"
-                  alt=""
-                  src="../public/vector-1-stroke.png"
-                />
-              </div>
-              <button class="dash2">
-                <b class="pool-monitoring">Pooling Monitoring</b>
-                <img
-                  class="vector-1-stroke3"
-                  alt=""
-                  src="../public/vector-1-stroke.png"
-                />
-              </button>
-              <button class="dash3">
-                <b class="sniper">Sniper</b>
-                <img
-                  class="vector-1-stroke4"
-                  alt=""
-                  src="../public/vector-1-stroke.png"
-                />
-              </button>
-              <div class="dash4">
-                <b class="depth-viz">Depth Viz</b>
-                <img
-                  class="vector-1-stroke5"
-                  loading="lazy"
-                  alt=""
-                  src="../public/vector-1-stroke-3.png"
-                />
-              </div>
-            </div>
-            <div class="right-column">
-              <img
-                class="right-column-child"
-                loading="lazy"
-                alt=""
-                src="../public/group_2.svg"
-              />
-            </div>
-          </div>
-        </section>
-      </main>
     </div>
-  </body>
+    </div>
+    </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
 </html>
-
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/global.css
-
-  
-  :root {
-    --color-gray-100: #11253e;
-    --secondary-buttons: #0a2540;
-  }
-  
-
-File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/index.css
-.space {
-    width: 104px;
-    height: 44px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
-  .home,
-  .space,
-  .space1 {
-    position: relative;
-  }
-  .space1 {
-    width: 103px;
-    height: 44px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
-  .home {
-    text-decoration: none;
-    flex: 1;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-home,
-  .button-labels {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .button-home {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-  }
-  .button-labels {
-    width: 91.1px;
-    flex-direction: column;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .dashboard,
-  .docs2,
-  .monitoring {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .docs2 {
-    margin-left: -2px;
-    display: inline-block;
-  }
-  .docs1 {
-    flex: 1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts1 {
-    margin-left: -16px;
-    text-decoration: none;
-    width: 103px;
-    position: relative;
-    line-height: 44px;
-    font-weight: 700;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    debug_commit: 69da668;
-  }
-  .contacts,
-  .content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .contacts {
-    width: 76px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .content {
-    margin: 0;
-    width: 385px;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--secondary-buttons);
-    font-family: var(--font-abhaya-libre);
-  }
-  .app {
-    text-decoration: none;
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    color: inherit;
-  }
-  .vector-1-stroke1 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-    display: none;
-  }
-  .button-app {
-    align-self: stretch;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-200);
-    overflow: hidden;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0 var(--padding-2xl);
-    gap: var(--gap-11xs-9);
-  }
-  .button-app,
-  .button-labels1,
-  .buttons,
-  .main {
-    display: flex;
-    align-items: flex-start;
-  }
-  .button-labels1 {
-    width: 91.1px;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-7xs-5) 0 0;
-    box-sizing: border-box;
-  }
-  .buttons,
-  .main {
-    flex-direction: row;
-    max-width: 100%;
-  }
-  .buttons {
-    flex: 1;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .main {
-    width: 922.2px;
-    justify-content: flex-start;
-    padding: 0 74px;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    text-align: center;
-    font-size: var(--font-size-mini);
-    color: var(--color-gray-100);
-    font-family: var(--font-abhaya-libre);
-  }
-  .shape-icon {
-    height: 167px;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  .shape-container {
-    width: 180px;
-    margin: 0 !important;
-    position: absolute;
-    top: calc(50% - 419.5px);
-    left: calc(50% - 90px);
-    background-color: transparent;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 21.5px 27px;
-    box-sizing: border-box;
-  }
-  .git-docs {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-  }
-  .vector-1-stroke2 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .docs11,
-  .left-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-  .docs11 {
-    width: 200px;
-    border-radius: var(--br-81xl);
-    background-color: var(--color-gray-400);
-    overflow: hidden;
-    flex-direction: row;
-    padding: var(--padding-9xs-5) var(--padding-4xl) var(--padding-9xs-5)
-      var(--padding-3xl);
-    gap: var(--gap-3xs);
-    white-space: nowrap;
-  }
-  .left-column {
-    width: 450px;
-    flex-direction: column;
-    padding: var(--padding-56xl) var(--padding-xl);
-    min-width: 450px;
-    max-width: 100%;
-  }
-  .web-docs {
-    flex: 1;
-    position: relative;
-    font-size: var(--font-size-xl);
-    letter-spacing: 0.01em;
-    line-height: 33px;
-    font-weight: 700;
-    font-family: var(--font-abhaya-libre);
-    color: var(--color-gray-300);
-    text-align: center;
-  }
-  .vector-1-stroke3 {
-    height: 9.4px;
-    width: 6.1px;
-    position: relative;
-  }
-  .docs21 {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-9xs-5) var(--padding-4xl) var(--padding-9xs-5)
-      var(--padding-3xl);
-    background-color: var(--color-gray-400);
-    width: 200px;
-    border-radius: var(--br-81xl);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: var(--gap-3xs);
-    white-space: nowrap;
-  }
-  .docs21:hover {
-    background-color: rgba(51, 51, 51, 0.3);
-  }
-  .body,
-  .center,
-  .right-column {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .right-column {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-56xl) var(--padding-xl);
-    min-width: 400px;
-  }
-  .body,
-  .center {
-    align-self: stretch;
-    flex-shrink: 0;
-  }
-  .body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 62px 0 386.5px;
-    position: relative;
-    min-height: 963px;
-    row-gap: 20px;
-  }
-  .center {
-    height: 1032px;
-    overflow: hidden;
-    flex-direction: column;
-    padding: 13px 71px 975px;
-    gap: 13px;
-    text-align: center;
-    font-size: var(--font-size-xl);
-    color: var(--color-gray-300);
-    font-family: var(--font-abhaya-libre);
-  }
-  .background,
-  .center,
-  .docs {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .background {
-    flex: 1;
-    background: radial-gradient(
-        50% 50%at 50% 50%,
-        #d5e2b2 16.67%,
-        rgba(144, 224, 255, 0) 48.34%
-      ),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        rgba(236, 170, 122, 0.1) 50.74%,
-        rgba(169, 96, 238, 0)
-      ),
-      radial-gradient(50% 50%at 50% 50%, #ffcb57 31.7%, rgba(238, 117, 92, 0)),
-      radial-gradient(
-        50% 50%at 50% 50%,
-        #ffcb57 41.18%,
-        rgba(183, 120, 225, 0) 71.99%
-      ),
-      radial-gradient(50% 50%at 50% 50%, #a960ee, rgba(199, 136, 203, 0.62) 90.5%);
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .docs {
-    width: 100%;
-    position: relative;
-    background-color: var(--white);
-    border: 1px solid #000;
-    box-sizing: border-box;
-    overflow: auto;
-    flex-direction: row;
-    line-height: normal;
-    letter-spacing: normal;
-  }
-  @media screen and (max-width: 950px) {
-    .main {
-      padding-left: var(--padding-18xl);
-      padding-right: var(--padding-18xl);
-      box-sizing: border-box;
-    }
-    .left-column,
-    .right-column {
-      flex: 1;
-    }
-    .body {
-      flex-wrap: wrap;
-    }
-    .center {
-      height: auto;
-      padding-top: var(--padding-xl);
-      padding-bottom: 412px;
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    .content {
-      display: none;
-    }
-    .left-column,
-    .right-column {
-      min-width: 100%;
-    }
-    .body,
-    .center {
-      box-sizing: border-box;
-    }
-    .body {
-      padding-top: 40px;
-      padding-bottom: 251px;
-    }
-    .center {
-      padding-left: var(--padding-16xl);
-      padding-right: var(--padding-16xl);
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .center {
-      padding-bottom: 268px;
-      box-sizing: border-box;
-    }
-  }
-  
 
 File: /mnt/c/Users/amvmo/Documents/GitHub/landingpage.github/docs/index.html
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Docs Page</title>
+    <base href="/">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="docs">
-      <main class="background">
-        <section class="center">
-          <div class="space"></div>
-          <div class="space1"></div>
-          <header class="main">
-            <div class="buttons">
-              <div class="button-labels">
-                <div class="button-home">
-                  <a class="home">orphic</a>
-                  <img
-                    class="vector-1-stroke"
-                    alt=""
-                    src="./public/vector-1-stroke.svg"
-                  />
+<body>
+    <div class="orphic-landing">
+        <section class="background">
+            <div class="center">
+                <div class="header-tabs">
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/index.html">orphic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <div class="space"></div>
+                        <div class="docs">
+                            <a class="docs1" href="/dashboard/index.html">Dashboard</a>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/index.html">Monitoring</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/docs/index.html">Docs</a></li>
+                        </div>
+                        <div class="docs">
+                            <li><a class="docs1" href="/contact/index.html">Contacts</a></li>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+
+
+                    <div class="tab-labels">
+                        <div class="home">
+                            <div class="button-home">
+                                <a class="home1" href="/app/index.html">App</a>
+                                <img class="vector" alt="" src="./public/vector.svg" />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
-              <nav class="content">
-                <a class="dashboard">Dashboard</a>
-                <a class="monitoring">Monitoring</a>
-                <div class="docs1">
-                  <a class="docs2">Docs</a>
+
+                <div class="body">
+                    <div class="right-column">
+                        <img class="shape-icon" loading="lazy" alt="" src="../public/93.svg" />
+                    </div>
+                    <div class="left-column">
+                        <button class="button-home">
+                            <b class="git-docs">Gitbook Docs</b>
+                            <img class="vector-1-stroke2" loading="lazy" alt="" src="./public/vector-1-stroke.svg" />
+                        </button>
+                    </div>
+                    <div class="left-column">
+                        <button class="button-home">
+                            <b class="git-docs">Webpage Docs</b>
+                            <img class="vector-1-stroke2" loading="lazy" alt="" src="./public/vector-1-stroke.svg" />
+                        </button>
+                    </div>
                 </div>
-                <div class="contacts">
-                  <a class="contacts1">Contacts</a>
-                </div>
-              </nav>
-              <div class="button-labels1">
-                <div class="button-app">
-                  <a class="app">App</a>
-                  <img
-                    class="vector-1-stroke1"
-                    alt=""
-                    src="./public/vector-1-stroke1.svg"
-                  />
-                </div>
-              </div>
+
             </div>
-          </header>
-          <div class="body">
-            <div class="shape-container">
-              <img
-                class="shape-icon"
-                loading="lazy"
-                alt=""
-                src="./public/shape.svg"
-              />
-            </div>
-            <div class="left-column">
-              <div class="docs11">
-                <b class="git-docs">Gitbook Docs</b>
-                <img
-                  class="vector-1-stroke2"
-                  loading="lazy"
-                  alt=""
-                  src="./public/vector-1-stroke.svg"
-                />
-              </div>
-            </div>
-            <div class="right-column">
-              <button class="docs21">
-                <b class="web-docs">Webpage Docs</b>
-                <img
-                  class="vector-1-stroke3"
-                  alt=""
-                  src="./public/vector-1-stroke.svg"
-                />
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
     </div>
-  </body>
-</html>
 
+    </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
 
