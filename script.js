@@ -3,20 +3,16 @@ if (!localStorage.getItem('auth')) {
   localStorage.setItem('auth', 'false');
 }
 
-// Assuming you have included CryptoJS library
-fetch('/creds.json') // Fetch the obfuscated creds.json
-  .then(response => response.json())
-  .then(creds => {
-    function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+function login() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-      // Hash the entered password
-      const hashedPassword = CryptoJS.SHA256(password).toString();
+  // Hash the entered password
+  const hashedPassword = CryptoJS.SHA256(password).toString();
 
-      console.log(creds.username, creds.password, username, password);
-      console.log(username, password);
-
+  fetch('/creds.json') // Fetch the obfuscated creds.json
+    .then(response => response.json())
+    .then(creds => {
       // Compare hashed values (case-sensitive!)
       if (username === creds.username && hashedPassword === creds.password) {
         // Store a token in localStorage
@@ -30,7 +26,9 @@ fetch('/creds.json') // Fetch the obfuscated creds.json
       } else {
       }
     }
-  });
+    );
+  }
+
 
 // Function to apply a random background gradient
 function setRandomBackground() {

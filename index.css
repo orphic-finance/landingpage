@@ -18,7 +18,12 @@
   flex-direction: row;
   padding: 0 var(--padding-2xl);
   gap: var(--gap-11xs-9);
+  text-decoration: none;
+  position: relative;
+  line-height: 20px;
+  border: none; /* Add this line to remove the border */
 }
+
 .home {
   display: flex;
   align-items: flex-start;
