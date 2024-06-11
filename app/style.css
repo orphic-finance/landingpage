@@ -22,6 +22,9 @@ h1 {
     border-radius: 12px; /* Optional: Rounded corners */
     margin-bottom: 20px; /* Add space below the chart */
     width: 80%; /* Adjust width as needed */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 svg {
