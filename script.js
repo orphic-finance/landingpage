@@ -12,14 +12,11 @@ function login() {
 
   fetch('/creds.json') // Fetch the obfuscated creds.json
     .then(response => response.json())
+    
     .then(creds => {
-      // Compare hashed values (case-sensitive!)
       if (username === creds.username && hashedPassword === creds.password) {
-        // Store a token in localStorage
         localStorage.setItem('auth', 'true');
-        // Store a flag to indicate that the background should not change
         localStorage.setItem('backgroundSet', 'true');
-        // Redirect to the secured page (e.g., index.html)
         window.location.href = '/index.html';
         localStorage.setItem('auth', 'true');
         window.location.href = '/index.html';
